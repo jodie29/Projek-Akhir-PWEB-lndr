@@ -18,6 +18,19 @@
     </div>
 </div>
 
+<div class="flex gap-3 mb-6">
+    <a href="{{ route('admin.services.index') }}" class="px-3 py-2 bg-indigo-600 text-white rounded">Kelola Layanan</a>
+    <a href="{{ route('admin.couriers.index') }}" class="px-3 py-2 bg-indigo-500 text-white rounded">Kelola Kurir</a>
+</div>
+
+<div class="mb-6">
+    <a href="{{ route('admin.orders.pending') }}" class="px-3 py-2 bg-red-600 text-white rounded">Tinjau Pesanan (Konfirmasi Harga)</a>
+</div>
+
+<div class="mb-6">
+    <a href="{{ route('admin.cashier.create') }}" class="px-3 py-2 bg-blue-700 text-white rounded">Kasir Cepat (Walk-in)</a>
+</div>
+
 <div class="bg-white shadow rounded-xl p-5">
     <h3 class="text-xl font-semibold mb-4">Riwayat Transaksi Terbaru</h3>
 
@@ -41,10 +54,15 @@
                 <td class="p-2">Rp {{ number_format($order->total_price, 0, ',', '.') }}</td>
                 <td class="p-2">{{ $order->payment_method }}</td>
                 <td class="p-2">
-                    <span class="px-2 py-1 text-xs rounded-full 
-                        {{ $order->status == 'paid' ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700' }}">
-                        {{ ucfirst($order->status) }}
-                    </span>
+                    @php
+                        $st = $order->status ?? 'pending';
+                        $badge = 'bg-gray-100 text-gray-800';
+                        if ($st === 'paid') { $badge = 'bg-green-100 text-green-700'; }
+                        elseif ($st === 'confirmed') { $badge = 'bg-yellow-100 text-yellow-800'; }
+                        elseif ($st === 'pending') { $badge = 'bg-orange-100 text-orange-800'; }
+                        elseif ($st === 'rejected') { $badge = 'bg-red-100 text-red-700'; }
+                    @endphp
+                    <span class="px-2 py-1 text-xs rounded-full {{ $badge }}">{{ ucfirst($st) }}</span>
                 </td>
             </tr>
             @empty

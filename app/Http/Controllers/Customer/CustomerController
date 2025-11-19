@@ -1,0 +1,60 @@
+<?php
+
+namespace App\Http\Controllers\Customer; // KOREKSI: Tambahkan 'Customer' ke namespace
+
+use App\Http\Controllers\Controller; // Pastikan menggunakan base controller yang benar
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+class CustomerController extends Controller
+{
+    /**
+     * Tampilkan Dashboard utama Pelanggan.
+     * Di sini pelanggan dapat melihat ringkasan status pesanan.
+     */
+    public function dashboard()
+    {
+        // Logika untuk mengambil ringkasan pesanan pelanggan
+        // Contoh: $pendingOrders = Auth::user()->orders()->where('status', 'pending')->count();
+        return view('customer.dashboard');
+    }
+
+    /**
+     * Tampilkan formulir untuk membuat pesanan baru.
+     */
+    public function createOrder()
+    {
+        // Logika untuk menampilkan pilihan layanan dan opsi pengiriman
+        return view('customer.create_order');
+    }
+
+    /**
+     * Proses penyimpanan pesanan baru.
+     */
+    public function storeOrder(Request $request)
+    {
+        // Logika validasi dan penyimpanan pesanan
+        // return redirect()->route('customer.order.timeline', ['order' => $newOrder->id]);
+        return redirect()->route('customer.dashboard')->with('success', 'Pesanan berhasil dibuat!');
+    }
+
+    /**
+     * Tampilkan riwayat transaksi lengkap dan arsip digital (e-invoice).
+     */
+    public function history()
+    {
+        // Logika untuk mengambil riwayat transaksi pelanggan
+        // return view('customer.history', ['transactions' => $transactions]);
+        return view('customer.history');
+    }
+
+    /**
+     * Tampilkan detail perkembangan pesanan (Timeline Status Detail).
+     */
+    public function showTimeline($orderId)
+    {
+        // Logika untuk mengambil data pesanan dan status timeline
+        // return view('customer.timeline', ['order' => $order]);
+        return view('customer.timeline');
+    }
+}

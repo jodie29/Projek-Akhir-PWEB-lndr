@@ -19,6 +19,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // Register route middleware aliases if router available
+        if ($this->app->bound('router')) {
+            $router = $this->app->make(\Illuminate\Routing\Router::class);
+            // alias 'role' middleware to App\Http\Middleware\RoleMiddleware
+            $router->aliasMiddleware('role', \App\Http\Middleware\RoleMiddleware::class);
+        }
     }
 }
