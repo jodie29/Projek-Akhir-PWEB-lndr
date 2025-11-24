@@ -20,8 +20,11 @@ class DashboardController extends Controller
 
         // Statistik sederhana
         $total_orders = Order::count();
-        $income_today = Order::whereDate('created_at', Carbon::today())
-            ->where('status', 'paid')
+        $income_today = Order::where('status', 'paid')
+            ->where(function ($query) {
+                $query->whereDate('approved_at', Carbon::today())
+                      ->orWhereDate('collected_at', Carbon::today());
+            })
             ->sum('total_price');
         $total_services = Service::count();
 
