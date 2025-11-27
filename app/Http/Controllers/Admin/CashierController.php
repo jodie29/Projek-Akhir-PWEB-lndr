@@ -22,12 +22,14 @@ class CashierController extends Controller
             'service_id' => 'required|exists:services,id',
             'actual_weight' => 'required|numeric|min:0.1',
             'payment_method' => 'required|string|in:Tunai,QRIS,Bayar Nanti',
+            'customer_name' => 'sometimes|string|max:255',
+            'customer_phone' => 'sometimes|string|max:32',
+            'customer_address' => 'sometimes|string|max:1024',
         ]);
 
         $service = Service::findOrFail($data['service_id']);
         $weight = (float) $data['actual_weight'];
-        // Walk-in cashier: no delivery fee
-        $shipping = 0;
+        $shipping = 0; // walk-in cashier has no delivery cost
         $final = round($weight * $service->price_per_kg + $shipping, 2);
 
         $orderData = [
@@ -39,8 +41,7 @@ class CashierController extends Controller
             'is_walk_in' => true,
         ];
 
-        // If cashier selects 'Bayar Nanti', do not mark as paid
-        if ($data['payment_method'] === 'Bayar Nanti') {
+        if ((($data['payment_method'] ?? '') === 'Bayar Nanti')) {
             $orderData['status'] = 'pending';
         } else {
             $orderData['status'] = 'paid';
@@ -50,6 +51,6 @@ class CashierController extends Controller
 
         $order = Order::create($orderData);
 
-        return redirect()->route('admin.cashier.create')->with('success', 'Transaksi kasir berhasil disimpan (LUNAS).');
+        return redirect()->route('admin.cashier.create')->with('success', 'Transaksi kasir berhasil disimpan.');
     }
 }
