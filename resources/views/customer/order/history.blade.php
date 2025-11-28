@@ -3,18 +3,25 @@
 @section('title', 'Riwayat Pesanan')
 
 @section('content')
-<div class="max-w-7xl mx-auto">
-    <h1 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2">Riwayat Semua Pesanan Anda</h1>
+    <div class="max-w-7xl mx-auto">
+    <x-header-illustration title="Riwayat Semua Pesanan Anda" :image="'https://static.vecteezy.com/system/resources/previews/026/721/193/non_2x/washing-machine-and-laundry-laundry-sticker-png.png'"/>
+    <div class="flex items-center justify-between mb-6 border-b pb-2">
+        <h1 class="text-3xl font-bold text-gray-800">Riwayat Semua Pesanan Anda</h1>
+        <a href="{{ route('customer.dashboard') }}" class="inline-flex items-center px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg shadow-sm transition duration-150">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h4l3 8 4-18 3 8h4"/></svg>
+            Kembali ke Dashboard
+        </a>
+    </div>
     
     <!-- Bagian Filter dan Pencarian -->
     <div class="bg-white p-6 rounded-xl shadow-lg mb-6 border border-gray-100">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
             <!-- Filter Status (Tabs/Buttons) -->
             <div class="flex space-x-2 overflow-x-auto pb-2">
-                <button class="px-4 py-2 text-sm font-medium rounded-full bg-indigo-600 text-white shadow-md transition duration-150">Semua (10)</button>
-                <button class="px-4 py-2 text-sm font-medium rounded-full bg-gray-100 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition duration-150">Aktif (2)</button>
-                <button class="px-4 py-2 text-sm font-medium rounded-full bg-gray-100 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition duration-150">Selesai (8)</button>
-                <button class="px-4 py-2 text-sm font-medium rounded-full bg-gray-100 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition duration-150">Dibatalkan (0)</button>
+                <button class="px-4 py-2 text-sm font-medium rounded-full bg-indigo-600 text-white shadow-md transition duration-150">Semua ({{ $totalCount ?? 0 }})</button>
+                <button class="px-4 py-2 text-sm font-medium rounded-full bg-gray-100 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition duration-150">Aktif ({{ $activeCount ?? 0 }})</button>
+                <button class="px-4 py-2 text-sm font-medium rounded-full bg-gray-100 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition duration-150">Selesai ({{ $completedCount ?? 0 }})</button>
+                <button class="px-4 py-2 text-sm font-medium rounded-full bg-gray-100 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition duration-150">Dibatalkan ({{ $cancelledCount ?? 0 }})</button>
             </div>
             
             <!-- Pencarian -->
@@ -39,74 +46,40 @@
                     <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Layanan</th>
                     <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
                     <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Total (Rp)</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tanggal Tagihan</th>
                     <th class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Aksi</th>
                 </tr>
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
                 
-                <!-- Placeholder Pesanan Aktif 1 -->
-                <tr class="hover:bg-indigo-50 transition duration-100">
-                    <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-indigo-700">#P00105</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">17 Nov 2025, 10:00</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">Cuci Kering + Setrika</td>
+                @forelse($orders as $order)
+                <tr class="border-b hover:bg-gray-50 transition duration-100">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-indigo-700">{{ $order->order_number }}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ $order->created_at ? $order->created_at->format('Y-m-d H:i') : '-' }}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ $order->service->name ?? '-' }}</td>
                     <td class="px-6 py-4 whitespace-nowrap">
-                        <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
-                            Dalam Proses (Dicuci)
-                        </span>
+                        @php
+                            $st = $order->status ?? 'pending';
+                            $badge = 'bg-gray-100 text-gray-800';
+                            if (in_array($st, ['paid','completed','selesai','delivered'])) { $badge = 'bg-green-100 text-green-700'; }
+                            elseif (in_array($st, ['in_progress','di_laundry', 'dijemput', 'diantar'])) { $badge = 'bg-blue-100 text-blue-700'; }
+                            elseif (in_array($st, ['confirmed','menunggu_konfirmasi'])) { $badge = 'bg-purple-100 text-purple-700'; }
+                            elseif (in_array($st, ['pending','menunggu_jemput'])) { $badge = 'bg-orange-100 text-orange-800'; }
+                            elseif (in_array($st, ['awaiting_payment','pending_payment'])) { $badge = 'bg-red-100 text-red-700'; }
+                        @endphp
+                        <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full {{ $badge }}">{{ ucfirst(str_replace('_', ' ', $st)) }}</span>
                     </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Belum Final</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ $order->total_price && $order->total_price > 0 ? 'Rp ' . number_format($order->total_price, 0, ',', '.') : 'Belum Final' }}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">{{ $order->customer_confirmed_at ? $order->customer_confirmed_at->format('Y-m-d H:i') : '-' }}</td>
                     <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
-                        <a href="#" class="text-indigo-600 hover:text-indigo-900 font-semibold transition duration-150">Lihat Detail</a>
+                        <a href="{{ route('customer.order.show', $order->id) }}" class="text-indigo-600 hover:text-indigo-900 font-semibold transition duration-150">Lihat Detail</a>
                     </td>
                 </tr>
-
-                <!-- Placeholder Pesanan Aktif 2 -->
-                <tr class="hover:bg-indigo-50 transition duration-100">
-                    <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-indigo-700">#P00104</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">16 Nov 2025, 14:30</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">Cuci Kering Kilat</td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                        <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
-                            Menunggu Penjemputan
-                        </span>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Belum Final</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
-                        <a href="#" class="text-indigo-600 hover:text-indigo-900 font-semibold transition duration-150">Lihat Detail</a>
-                    </td>
+                @empty
+                <tr>
+                    <td colspan="6" class="text-center p-4 text-gray-500 bg-gray-50">Anda belum memiliki pesanan aktif.</td>
                 </tr>
-
-                <!-- Placeholder Pesanan Selesai 1 -->
-                <tr class="hover:bg-indigo-50 transition duration-100">
-                    <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-indigo-700">#P00103</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">10 Nov 2025, 08:00</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">Setrika Saja</td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                        <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                            Selesai (Diantar)
-                        </span>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Rp 45.000</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
-                        <a href="#" class="text-indigo-600 hover:text-indigo-900 font-semibold transition duration-150">Lihat Detail</a>
-                    </td>
-                </tr>
-                
-                <!-- Placeholder Pesanan Selesai 2 -->
-                <tr class="hover:bg-indigo-50 transition duration-100">
-                    <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-indigo-700">#P00102</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">05 Nov 2025, 12:00</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">Cuci Kering</td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                        <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                            Selesai (Diambil)
-                        </span>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Rp 52.500</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
-                        <a href="#" class="text-indigo-600 hover:text-indigo-900 font-semibold transition duration-150">Lihat Detail</a>
-                    </td>
-                </tr>
+                @endforelse
                 
                 <!-- Tambahkan lebih banyak baris pesanan di sini jika perlu -->
                 
@@ -114,17 +87,11 @@
         </table>
 
         <!-- Paginasi Sederhana -->
-        <div class="px-6 py-4 border-t flex justify-between items-center">
+        <div class="px-6 py-4 border-t flex flex-col md:flex-row justify-between items-center gap-3">
             <div class="text-sm text-gray-600">
-                Menampilkan 1 hingga 10 dari 25 Pesanan
+                Menampilkan {{ $orders->firstItem() ?? 0 }} hingga {{ $orders->lastItem() ?? 0 }} dari {{ $orders->total() ?? 0 }} Pesanan
             </div>
-            <div class="flex space-x-2">
-                <button class="px-3 py-1 border rounded-lg text-sm text-gray-600 hover:bg-gray-100">Sebelumnya</button>
-                <button class="px-3 py-1 border rounded-lg text-sm bg-indigo-600 text-white">1</button>
-                <button class="px-3 py-1 border rounded-lg text-sm text-gray-600 hover:bg-gray-100">2</button>
-                <button class="px-3 py-1 border rounded-lg text-sm text-gray-600 hover:bg-gray-100">3</button>
-                <button class="px-3 py-1 border rounded-lg text-sm text-gray-600 hover:bg-gray-100">Berikutnya</button>
-            </div>
+            <div class="mt-2 md:mt-0">{{ $orders->links() }}</div>
         </div>
     </div>
 </div>

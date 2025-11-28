@@ -2,7 +2,8 @@
 
 @section('content')
 <div class="max-w-4xl mx-auto py-8">
-    <h1 class="text-2xl font-bold mb-4">Manajemen Layanan</h1>
+
+    <x-header-illustration title="Manajemen Layanan" :image="'https://static.vecteezy.com/system/resources/previews/026/721/193/non_2x/washing-machine-and-laundry-laundry-sticker-png.png'"/>
 
     @if(session('success'))
         <div class="bg-green-100 text-green-800 px-4 py-2 mb-4">{{ session('success') }}</div>

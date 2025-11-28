@@ -1,0 +1,5328 @@
+{
+    "files": [
+        {
+            "path": "app\\Console\\Commands\\InspectPasswords.php",
+            "removed": 1
+        },
+        {
+            "path": "app\\Console\\Kernel.php",
+            "removed": 1
+        },
+        {
+            "path": "app\\Http\\Controllers\\Admin\\AdminDashboardController.php",
+            "removed": 11
+        },
+        {
+            "path": "app\\Http\\Controllers\\Admin\\OrderApprovalController.php",
+            "removed": 25
+        },
+        {
+            "path": "app\\Http\\Controllers\\Admin\\OrderCollectionController.php",
+            "removed": 1
+        },
+        {
+            "path": "app\\Http\\Controllers\\Admin\\OrderController.php",
+            "removed": 12
+        },
+        {
+            "path": "app\\Http\\Controllers\\Admin\\ServiceController.php",
+            "removed": 1
+        },
+        {
+            "path": "app\\Http\\Controllers\\Admin\\TransactionController.php",
+            "removed": 1
+        },
+        {
+            "path": "app\\Http\\Controllers\\Admin\\UserController.php",
+            "removed": 1
+        },
+        {
+            "path": "app\\Http\\Controllers\\AuthController.php",
+            "removed": 15
+        },
+        {
+            "path": "app\\Http\\Controllers\\Courier\\CourierDashboardController.php",
+            "removed": 20
+        },
+        {
+            "path": "app\\Http\\Controllers\\Courier\\OrderController.php",
+            "removed": 29
+        },
+        {
+            "path": "app\\Http\\Controllers\\Customer\\CustomerController.php",
+            "removed": 37
+        },
+        {
+            "path": "app\\Http\\Controllers\\Customer\\CustomerDashboardController.php",
+            "removed": 8
+        },
+        {
+            "path": "app\\Http\\Controllers\\OrderConfirmationController.php",
+            "removed": 8
+        },
+        {
+            "path": "app\\Http\\Kernel.php",
+            "removed": 5
+        },
+        {
+            "path": "app\\Http\\Middleware\\Authenticate.php",
+            "removed": 3
+        },
+        {
+            "path": "app\\Http\\Middleware\\RedirectIfAuthenticated.php",
+            "removed": 7
+        },
+        {
+            "path": "app\\Http\\Middleware\\RoleMiddleware.php",
+            "removed": 4
+        },
+        {
+            "path": "app\\Models\\Order.php",
+            "removed": 2
+        },
+        {
+            "path": "app\\Models\\User.php",
+            "removed": 7
+        },
+        {
+            "path": "app\\Providers\\AppServiceProvider.php",
+            "removed": 3
+        },
+        {
+            "path": "app\\Providers\\RouteServiceProvider.php",
+            "removed": 3
+        },
+        {
+            "path": "backups\\views\\UserController.php",
+            "removed": 16
+        },
+        {
+            "path": "bootstrap\\app.php",
+            "removed": 2
+        },
+        {
+            "path": "config\\auth.php",
+            "removed": 4
+        },
+        {
+            "path": "config\\cache.php",
+            "removed": 1
+        },
+        {
+            "path": "config\\database.php",
+            "removed": 2
+        },
+        {
+            "path": "config\\mail.php",
+            "removed": 4
+        },
+        {
+            "path": "database\\migrations\\2025_11_13_101204_add_role_column_to_users_table.php",
+            "removed": 2
+        },
+        {
+            "path": "database\\migrations\\2025_11_17_090000_create_services_and_orders_table.php",
+            "removed": 5
+        },
+        {
+            "path": "database\\migrations\\2025_11_22_114100_add_phone_and_address_to_users_table.php",
+            "removed": 1
+        },
+        {
+            "path": "database\\seeders\\AdminUserSeeder.php",
+            "removed": 3
+        },
+        {
+            "path": "database\\seeders\\DatabaseSeeder.php",
+            "removed": 1
+        },
+        {
+            "path": "database\\seeders\\ServiceSeeder.php",
+            "removed": 1
+        },
+        {
+            "path": "public\\index.php",
+            "removed": 3
+        },
+        {
+            "path": "resources\\views\\layouts\\app.blade.php",
+            "removed": 10
+        },
+        {
+            "path": "routes\\web.php",
+            "removed": 33
+        },
+        {
+            "path": "storage\\framework\\views\\9095ae314d0ccfd32eeccf227c2dca14.php",
+            "removed": 1
+        },
+        {
+            "path": "tests\\Feature\\ExampleTest.php",
+            "removed": 1
+        },
+        {
+            "path": "tests\\TestCase.php",
+            "removed": 1
+        },
+        {
+            "path": "tmp_check_admin_dashboard.php",
+            "removed": 3
+        },
+        {
+            "path": "tmp_check_courier_dashboard.php",
+            "removed": 3
+        },
+        {
+            "path": "tmp_courier_deliver.php",
+            "removed": 1
+        },
+        {
+            "path": "tmp_courier_pickup.php",
+            "removed": 1
+        },
+        {
+            "path": "tmp_get_admin.php",
+            "removed": 1
+        },
+        {
+            "path": "tmp_mark_ready.php",
+            "removed": 1
+        },
+        {
+            "path": "tmp_mark_ready_noassign.php",
+            "removed": 2
+        },
+        {
+            "path": "tmp_reconcile_transactions.php",
+            "removed": 1
+        },
+        {
+            "path": "tmp_setup_confirm.php",
+            "removed": 1
+        },
+        {
+            "path": "tools\\remove_double_slash_comments.php",
+            "removed": 10
+        },
+        {
+            "path": "vendor\\autoload.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\brick\\math\\src\\BigDecimal.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\brick\\math\\src\\BigInteger.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\brick\\math\\src\\BigNumber.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\brick\\math\\src\\Internal\\Calculator\\NativeCalculator.php",
+            "removed": 10
+        },
+        {
+            "path": "vendor\\brick\\math\\src\\Internal\\Calculator.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\composer\\autoload_classmap.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\composer\\autoload_files.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\composer\\autoload_namespaces.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\composer\\autoload_psr4.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\composer\\autoload_real.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\composer\\autoload_static.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\composer\\ClassLoader.php",
+            "removed": 16
+        },
+        {
+            "path": "vendor\\composer\\InstalledVersions.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\composer\\platform_check.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\dflydev\\dot-access-data\\src\\Data.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\doctrine\\inflector\\src\\Inflector.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\doctrine\\inflector\\src\\Rules\\Italian\\Inflectible.php",
+            "removed": 24
+        },
+        {
+            "path": "vendor\\doctrine\\inflector\\src\\Rules\\Italian\\Uninflected.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\doctrine\\lexer\\src\\AbstractLexer.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\dragonmantank\\cron-expression\\src\\Cron\\AbstractField.php",
+            "removed": 15
+        },
+        {
+            "path": "vendor\\dragonmantank\\cron-expression\\src\\Cron\\CronExpression.php",
+            "removed": 10
+        },
+        {
+            "path": "vendor\\dragonmantank\\cron-expression\\src\\Cron\\DayOfMonthField.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\dragonmantank\\cron-expression\\src\\Cron\\DayOfWeekField.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\dragonmantank\\cron-expression\\src\\Cron\\HoursField.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\egulias\\email-validator\\src\\EmailLexer.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\egulias\\email-validator\\src\\Parser\\Comment.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\egulias\\email-validator\\src\\Parser\\CommentStrategy\\DomainComment.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\egulias\\email-validator\\src\\Parser\\DomainLiteral.php",
+            "removed": 10
+        },
+        {
+            "path": "vendor\\egulias\\email-validator\\src\\Parser\\DomainPart.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\egulias\\email-validator\\src\\Parser\\FoldingWhiteSpace.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\egulias\\email-validator\\src\\Parser\\LocalPart.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\egulias\\email-validator\\src\\Validation\\DNSCheckValidation.php",
+            "removed": 12
+        },
+        {
+            "path": "vendor\\egulias\\email-validator\\src\\Validation\\DNSGetRecordWrapper.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\rector-migrate.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Calculator\\Iban.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Calculator\\Isbn.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Core\\Uuid.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Core\\Version.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Extension\\Helper.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Factory.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Generator.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\ORM\\CakePHP\\EntityPopulator.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\ORM\\Doctrine\\ColumnTypeGuesser.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\ORM\\Doctrine\\EntityPopulator.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\ORM\\Mandango\\ColumnTypeGuesser.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\ORM\\Mandango\\EntityPopulator.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\ORM\\Propel\\ColumnTypeGuesser.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\ORM\\Propel\\EntityPopulator.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\ORM\\Propel\\Populator.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\ORM\\Propel2\\ColumnTypeGuesser.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\ORM\\Propel2\\EntityPopulator.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\ORM\\Propel2\\Populator.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\ORM\\Spot\\ColumnTypeGuesser.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\ORM\\Spot\\EntityPopulator.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\Base.php",
+            "removed": 21
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\cs_CZ\\Person.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\de_CH\\PhoneNumber.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\de_DE\\PhoneNumber.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\el_GR\\PhoneNumber.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\en_AU\\Address.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\en_AU\\PhoneNumber.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\en_GB\\PhoneNumber.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\en_IN\\Address.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\en_NG\\PhoneNumber.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\en_NZ\\PhoneNumber.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\en_PH\\Address.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\en_PH\\PhoneNumber.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\en_SG\\Address.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\en_SG\\Person.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\en_SG\\PhoneNumber.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\en_US\\Payment.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\en_US\\PhoneNumber.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\en_ZA\\Person.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\fa_IR\\Text.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\File.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\fr_CA\\Address.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\fr_CH\\PhoneNumber.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\fr_FR\\Company.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\fr_FR\\Person.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\fr_FR\\PhoneNumber.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\id_ID\\Address.php",
+            "removed": 18
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\id_ID\\Person.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\id_ID\\PhoneNumber.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\Image.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\Internet.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\is_IS\\Person.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\it_CH\\PhoneNumber.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\it_IT\\PhoneNumber.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\ja_JP\\Text.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\kk_KZ\\Address.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\ko_KR\\PhoneNumber.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\Lorem.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\ms_MY\\Person.php",
+            "removed": 14
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\nl_BE\\Payment.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\pt_BR\\Payment.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\ro_MD\\Address.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\ro_MD\\Person.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\ro_RO\\Address.php",
+            "removed": 10
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\ro_RO\\Person.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\ru_RU\\Company.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\sr_Cyrl_RS\\Person.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\sr_Latn_RS\\Person.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\Text.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\uk_UA\\Address.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\uk_UA\\PhoneNumber.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\Uuid.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\vi_VN\\PhoneNumber.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\fakerphp\\faker\\src\\Faker\\Provider\\zh_TW\\Text.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\filp\\whoops\\src\\Whoops\\Exception\\Frame.php",
+            "removed": 10
+        },
+        {
+            "path": "vendor\\filp\\whoops\\src\\Whoops\\Exception\\FrameCollection.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\filp\\whoops\\src\\Whoops\\Exception\\Inspector.php",
+            "removed": 12
+        },
+        {
+            "path": "vendor\\filp\\whoops\\src\\Whoops\\Handler\\CallbackHandler.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\filp\\whoops\\src\\Whoops\\Handler\\Handler.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\filp\\whoops\\src\\Whoops\\Handler\\PlainTextHandler.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\filp\\whoops\\src\\Whoops\\Handler\\PrettyPageHandler.php",
+            "removed": 29
+        },
+        {
+            "path": "vendor\\filp\\whoops\\src\\Whoops\\Handler\\XmlResponseHandler.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\filp\\whoops\\src\\Whoops\\Resources\\js\\whoops.base.js",
+            "removed": 12
+        },
+        {
+            "path": "vendor\\filp\\whoops\\src\\Whoops\\Resources\\views\\frame_code.html.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\filp\\whoops\\src\\Whoops\\Run.php",
+            "removed": 37
+        },
+        {
+            "path": "vendor\\filp\\whoops\\src\\Whoops\\Util\\HtmlDumperOutput.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\filp\\whoops\\src\\Whoops\\Util\\SystemFacade.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\filp\\whoops\\src\\Whoops\\Util\\TemplateHelper.php",
+            "removed": 13
+        },
+        {
+            "path": "vendor\\fruitcake\\php-cors\\src\\CorsService.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\guzzlehttp\\guzzle\\src\\Client.php",
+            "removed": 29
+        },
+        {
+            "path": "vendor\\guzzlehttp\\guzzle\\src\\Cookie\\CookieJar.php",
+            "removed": 14
+        },
+        {
+            "path": "vendor\\guzzlehttp\\guzzle\\src\\Cookie\\SetCookie.php",
+            "removed": 22
+        },
+        {
+            "path": "vendor\\guzzlehttp\\guzzle\\src\\Exception\\RequestException.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\guzzlehttp\\guzzle\\src\\functions_include.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\guzzlehttp\\guzzle\\src\\Handler\\CurlFactory.php",
+            "removed": 40
+        },
+        {
+            "path": "vendor\\guzzlehttp\\guzzle\\src\\Handler\\CurlMultiHandler.php",
+            "removed": 13
+        },
+        {
+            "path": "vendor\\guzzlehttp\\guzzle\\src\\Handler\\EasyHandle.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\guzzlehttp\\guzzle\\src\\Handler\\MockHandler.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\guzzlehttp\\guzzle\\src\\Handler\\StreamHandler.php",
+            "removed": 25
+        },
+        {
+            "path": "vendor\\guzzlehttp\\guzzle\\src\\MessageFormatter.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\guzzlehttp\\guzzle\\src\\Middleware.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\guzzlehttp\\guzzle\\src\\PrepareBodyMiddleware.php",
+            "removed": 10
+        },
+        {
+            "path": "vendor\\guzzlehttp\\guzzle\\src\\RedirectMiddleware.php",
+            "removed": 14
+        },
+        {
+            "path": "vendor\\guzzlehttp\\guzzle\\src\\Utils.php",
+            "removed": 15
+        },
+        {
+            "path": "vendor\\guzzlehttp\\promises\\src\\Coroutine.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\guzzlehttp\\promises\\src\\Create.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\guzzlehttp\\promises\\src\\EachPromise.php",
+            "removed": 21
+        },
+        {
+            "path": "vendor\\guzzlehttp\\promises\\src\\FulfilledPromise.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\guzzlehttp\\promises\\src\\Promise.php",
+            "removed": 21
+        },
+        {
+            "path": "vendor\\guzzlehttp\\promises\\src\\RejectedPromise.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\guzzlehttp\\promises\\src\\TaskQueue.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\guzzlehttp\\psr7\\src\\AppendStream.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\guzzlehttp\\psr7\\src\\BufferStream.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\guzzlehttp\\psr7\\src\\CachingStream.php",
+            "removed": 13
+        },
+        {
+            "path": "vendor\\guzzlehttp\\psr7\\src\\DroppingStream.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\guzzlehttp\\psr7\\src\\FnStream.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\guzzlehttp\\psr7\\src\\InflateStream.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\guzzlehttp\\psr7\\src\\LazyOpenStream.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\guzzlehttp\\psr7\\src\\LimitStream.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\guzzlehttp\\psr7\\src\\Message.php",
+            "removed": 10
+        },
+        {
+            "path": "vendor\\guzzlehttp\\psr7\\src\\MessageTrait.php",
+            "removed": 12
+        },
+        {
+            "path": "vendor\\guzzlehttp\\psr7\\src\\MultipartStream.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\guzzlehttp\\psr7\\src\\Request.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\guzzlehttp\\psr7\\src\\Stream.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\guzzlehttp\\psr7\\src\\StreamDecoratorTrait.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\guzzlehttp\\psr7\\src\\Uri.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\guzzlehttp\\psr7\\src\\UriComparator.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\guzzlehttp\\psr7\\src\\UriNormalizer.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\guzzlehttp\\psr7\\src\\UriResolver.php",
+            "removed": 18
+        },
+        {
+            "path": "vendor\\guzzlehttp\\psr7\\src\\Utils.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\guzzlehttp\\uri-template\\src\\UriTemplate.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\hamcrest\\hamcrest-php\\generator\\FactoryParameter.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\hamcrest\\hamcrest-php\\hamcrest\\Hamcrest\\Arrays\\IsArray.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\hamcrest\\hamcrest-php\\hamcrest\\Hamcrest\\Arrays\\IsArrayContainingKey.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\hamcrest\\hamcrest-php\\hamcrest\\Hamcrest\\Arrays\\IsArrayContainingKeyValuePair.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\hamcrest\\hamcrest-php\\hamcrest\\Hamcrest\\Arrays\\MatchingOnce.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\hamcrest\\hamcrest-php\\hamcrest\\Hamcrest\\Arrays\\SeriesMatchingOnce.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\hamcrest\\hamcrest-php\\hamcrest\\Hamcrest\\BaseDescription.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\hamcrest\\hamcrest-php\\hamcrest\\Hamcrest\\Core\\CombinableMatcher.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\hamcrest\\hamcrest-php\\hamcrest\\Hamcrest\\Matchers.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\hamcrest\\hamcrest-php\\hamcrest\\Hamcrest\\Number\\IsCloseTo.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\hamcrest\\hamcrest-php\\hamcrest\\Hamcrest\\Number\\OrderingComparison.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\hamcrest\\hamcrest-php\\hamcrest\\Hamcrest\\StringDescription.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\hamcrest\\hamcrest-php\\hamcrest\\Hamcrest\\Text\\IsEqualIgnoringWhiteSpace.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\hamcrest\\hamcrest-php\\hamcrest\\Hamcrest\\Text\\MatchesPattern.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\hamcrest\\hamcrest-php\\hamcrest\\Hamcrest\\Text\\StringContains.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\hamcrest\\hamcrest-php\\hamcrest\\Hamcrest\\Text\\StringContainsIgnoringCase.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\hamcrest\\hamcrest-php\\hamcrest\\Hamcrest\\Text\\StringEndsWith.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\hamcrest\\hamcrest-php\\hamcrest\\Hamcrest\\Text\\StringStartsWith.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\hamcrest\\hamcrest-php\\hamcrest\\Hamcrest\\TypeSafeDiagnosingMatcher.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\hamcrest\\hamcrest-php\\hamcrest\\Hamcrest\\TypeSafeMatcher.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\hamcrest\\hamcrest-php\\hamcrest\\Hamcrest\\Util.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\hamcrest\\hamcrest-php\\hamcrest\\Hamcrest.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\config\\app.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\laravel\\framework\\config\\auth.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\laravel\\framework\\config\\broadcasting.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\config\\cache.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\config\\database.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\config\\mail.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Access\\Gate.php",
+            "removed": 16
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Auth\\DatabaseUserProvider.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Auth\\EloquentUserProvider.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Passwords\\DatabaseTokenRepository.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Passwords\\PasswordBroker.php",
+            "removed": 12
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Passwords\\PasswordBrokerManager.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Auth\\RequestGuard.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "removed": 42
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Auth\\TokenGuard.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Broadcasting\\Broadcasters\\LogBroadcaster.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Broadcasting\\Broadcasters\\NullBroadcaster.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Broadcasting\\BroadcastException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Broadcasting\\FakePendingBroadcast.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Bus\\DynamoBatchRepository.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Cache\\DatabaseStore.php",
+            "removed": 16
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Cache\\DynamoDbStore.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Cache\\Events\\CacheMissed.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Cache\\Events\\ForgettingKey.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Cache\\Events\\KeyForgetFailed.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Cache\\Events\\KeyForgotten.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Cache\\Events\\RetrievingKey.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Cache\\FileStore.php",
+            "removed": 10
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Cache\\MemcachedConnector.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Cache\\MemoizedStore.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Cache\\NoLock.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Cache\\NullStore.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Cache\\RedisStore.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Cache\\Repository.php",
+            "removed": 21
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Collections\\Arr.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Collections\\Collection.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Collections\\LazyCollection.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Concurrency\\ProcessDriver.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\HasParameters.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\PromptsForMissingInput.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Console\\GeneratorCommand.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Console\\ManuallyFailedException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Console\\Scheduling\\ScheduleListCommand.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Console\\Scheduling\\ScheduleTestCommand.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Container\\Attributes\\CurrentUser.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Container\\Attributes\\DB.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "removed": 60
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Container\\EntryNotFoundException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Auth\\Middleware\\AuthenticatesRequests.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Broadcasting\\ShouldBeUnique.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Broadcasting\\ShouldBroadcastNow.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Broadcasting\\ShouldRescue.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Cache\\LockTimeoutException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Console\\Isolatable.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Console\\PromptsForMissingInput.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Container\\BindingResolutionException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Container\\CircularDependencyException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Container\\ContextualAttribute.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Database\\Events\\MigrationEvent.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Debug\\ShouldntReport.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Encryption\\DecryptException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Encryption\\EncryptException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Events\\ShouldDispatchAfterCommit.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Events\\ShouldHandleEventsAfterCommit.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Filesystem\\FileNotFoundException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Filesystem\\LockTimeoutException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Queue\\ShouldBeEncrypted.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Queue\\ShouldBeUnique.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Queue\\ShouldBeUniqueUntilProcessing.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Queue\\ShouldQueue.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Queue\\ShouldQueueAfterCommit.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Redis\\LimiterTimeoutException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Session\\Middleware\\AuthenticatesSessions.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Support\\ValidatedData.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Validation\\ImplicitRule.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\View\\ViewCompilationException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Capsule\\Manager.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\ManagesTransactions.php",
+            "removed": 18
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\ConfigurationUrlParser.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
+            "removed": 43
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\MySqlConnector.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\PostgresConnector.php",
+            "removed": 18
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\SQLiteConnector.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\SqlServerConnector.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\BaseCommand.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php",
+            "removed": 15
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateMakeCommand.php",
+            "removed": 12
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\RefreshCommand.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\ResetCommand.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\DatabaseManager.php",
+            "removed": 15
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\DatabaseServiceProvider.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\DatabaseTransactionsManager.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\DeadlockException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Attributes\\Boot.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Attributes\\Initialize.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\BroadcastsEvents.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php",
+            "removed": 63
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Concerns\\GuardsAttributes.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Concerns\\HasAttributes.php",
+            "removed": 87
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Concerns\\HasEvents.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Concerns\\HasRelationships.php",
+            "removed": 43
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Concerns\\QueriesRelationships.php",
+            "removed": 25
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Factories\\Factory.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\MassAssignmentException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php",
+            "removed": 59
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\ModelInspector.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Prunable.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\BelongsTo.php",
+            "removed": 18
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany.php",
+            "removed": 29
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\Concerns\\AsPivot.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\Concerns\\InteractsWithPivotTable.php",
+            "removed": 42
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\HasManyThrough.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\HasOneOrMany.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\HasOneOrManyThrough.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\HasOneThrough.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\MorphTo.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\Relation.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\SoftDeletes.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Events\\ConnectionEstablished.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Events\\MigrationEnded.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Events\\MigrationsEnded.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Events\\MigrationsStarted.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Events\\MigrationStarted.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Events\\TransactionBeginning.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Events\\TransactionCommitted.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Events\\TransactionCommitting.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Events\\TransactionRolledBack.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Grammar.php",
+            "removed": 12
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\LostConnectionException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\DatabaseMigrationRepository.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\MigrationCreator.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php",
+            "removed": 42
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\MigrationServiceProvider.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\MultipleColumnsSelectedException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
+            "removed": 126
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Grammars\\Grammar.php",
+            "removed": 36
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Grammars\\MySqlGrammar.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Grammars\\PostgresGrammar.php",
+            "removed": 15
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Grammars\\SqlServerGrammar.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\JoinLateralClause.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Processors\\MariaDbProcessor.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\RecordNotFoundException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\RecordsNotFoundException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php",
+            "removed": 22
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\BlueprintState.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\ColumnDefinition.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Grammars\\Grammar.php",
+            "removed": 13
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar.php",
+            "removed": 12
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Grammars\\SQLiteGrammar.php",
+            "removed": 15
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\IndexDefinition.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\MariaDbBuilder.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\MySqlSchemaState.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\SchemaState.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\SqliteSchemaState.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Database\\SqlServerConnection.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\Encrypter.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Events\\Dispatcher.php",
+            "removed": 12
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Events\\NullDispatcher.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\AwsS3V3Adapter.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php",
+            "removed": 17
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\FilesystemAdapter.php",
+            "removed": 12
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\ServeFile.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\AliasLoader.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php",
+            "removed": 21
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Auth\\EmailVerificationRequest.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\LoadConfiguration.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Cloud.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Concerns\\ResolvesDumpSource.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\BroadcastingInstallCommand.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\KeyGenerateCommand.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\ServeCommand.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\EnvironmentDetector.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Events\\DiagnosingHealth.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Events\\MaintenanceModeDisabled.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Events\\MaintenanceModeEnabled.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Events\\Terminating.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Renderer\\Mappers\\BladeMapper.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidateCsrfToken.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\MixFileNotFoundException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\MixManifestNotFoundException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php",
+            "removed": 21
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Providers\\FormRequestServiceProvider.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\EventServiceProvider.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Testing\\Concerns\\InteractsWithExceptionHandling.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Testing\\Concerns\\WithoutExceptionHandlingHandler.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Testing\\DatabaseMigrations.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Testing\\DatabaseTransactionsManager.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Testing\\DatabaseTruncation.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Testing\\RefreshDatabase.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ViteException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ViteManifestNotFoundException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\Batch.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\ConnectionException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\HttpClientException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Http\\JsonResponse.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Http\\RedirectResponse.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Http\\Request.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Http\\Resources\\Json\\JsonResource.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\JsonSchema\\Types\\ObjectType.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\JsonSchema\\Types\\Type.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Log\\Logger.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailables\\Attachment.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php",
+            "removed": 25
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Mail\\MailManager.php",
+            "removed": 18
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Notifications\\AnonymousNotifiable.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Pagination\\AbstractCursorPaginator.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Pagination\\AbstractPaginator.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Pagination\\UrlWindow.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Process\\FakeInvokedProcess.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Attributes\\DeleteWhenMissingModels.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Attributes\\WithoutRelations.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Queue\\BeanstalkdQueue.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Capsule\\Manager.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\ClearCommand.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\ListenCommand.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\WorkCommand.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Failed\\NullFailedJobProvider.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Jobs\\Job.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Jobs\\RedisJob.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Listener.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Queue\\ManuallyFailedException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Queue\\NullQueue.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Queue\\QueueManager.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Queue\\QueueServiceProvider.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Queue\\SqsQueue.php",
+            "removed": 10
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Queue\\SyncQueue.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php",
+            "removed": 30
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Redis\\Connections\\PhpRedisConnection.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Routing\\AbstractRouteCollection.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Routing\\CompiledRouteCollection.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ValidateSignature.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Routing\\MiddlewareNameResolver.php",
+            "removed": 15
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResolvesRouteDependencies.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResourceRegistrar.php",
+            "removed": 30
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteAction.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteBinding.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteCollection.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteParameterBinder.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "removed": 15
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteUrlGenerator.php",
+            "removed": 30
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RoutingServiceProvider.php",
+            "removed": 12
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Routing\\SortedMiddleware.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php",
+            "removed": 12
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Session\\SessionServiceProvider.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Session\\TokenMismatchException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Support\\DateFactory.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Support\\Env.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Support\\Exceptions\\MathException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Support\\Manager.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Support\\MessageBag.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Support\\NamespacedItemResolver.php",
+            "removed": 18
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Support\\Once.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Support\\Onceable.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Support\\ProcessUtils.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Support\\ServiceProvider.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Support\\Str.php",
+            "removed": 10
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Support\\Testing\\Fakes\\BatchFake.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Support\\Testing\\Fakes\\BatchRepositoryFake.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Support\\Testing\\Fakes\\EventFake.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Support\\Testing\\Fakes\\ExceptionHandlerFake.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Support\\Testing\\Fakes\\Fake.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Support\\Testing\\Fakes\\MailFake.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Support\\Testing\\Fakes\\NotificationFake.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Support\\Testing\\Fakes\\QueueFake.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Support\\UriQueryString.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Testing\\Constraints\\ArraySubset.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Testing\\LoggedExceptionCollection.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Testing\\TestResponseAssert.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Translation\\ArrayLoader.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Translation\\TranslationServiceProvider.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Translation\\Translator.php",
+            "removed": 25
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Concerns\\FormatsMessages.php",
+            "removed": 36
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Concerns\\ValidatesAttributes.php",
+            "removed": 14
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Factory.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Validation\\UnauthorizedException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Validation\\ValidatesWhenResolvedTrait.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Validation\\ValidationRuleParser.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Validation\\ValidationServiceProvider.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php",
+            "removed": 21
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\BladeCompiler.php",
+            "removed": 13
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\ComponentTagCompiler.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Concerns\\CompilesUseStatements.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\View\\Concerns\\ManagesEvents.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\View\\Factory.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\laravel\\pail\\src\\File.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\pail\\src\\Files.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\pail\\src\\Handler.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\pail\\src\\LoggerFactory.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\pail\\src\\Options.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\pail\\src\\Printers\\CliPrinter.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\pail\\src\\ValueObjects\\MessageLogged.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\pail\\src\\ValueObjects\\Origin\\Console.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\pail\\src\\ValueObjects\\Origin\\Http.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\pail\\src\\ValueObjects\\Origin\\Queue.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\prompts\\src\\Clear.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\prompts\\src\\Concerns\\FakesInputOutput.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\prompts\\src\\Concerns\\Truncation.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\prompts\\src\\Concerns\\TypedValue.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\prompts\\src\\Exceptions\\FormRevertedException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\prompts\\src\\Exceptions\\NonInteractiveValidationException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\prompts\\src\\MultiSearchPrompt.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\prompts\\src\\Note.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\prompts\\src\\Progress.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\prompts\\src\\Prompt.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\prompts\\src\\Spinner.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\prompts\\src\\Support\\Result.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\prompts\\src\\TextareaPrompt.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\laravel\\prompts\\src\\Themes\\Default\\Concerns\\InteractsWithStrings.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\laravel\\prompts\\src\\Themes\\Default\\Renderer.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\sail\\src\\Console\\Concerns\\InteractsWithDockerComposeServices.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\laravel\\serializable-closure\\src\\Support\\ClosureStream.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\serializable-closure\\src\\Support\\ReflectionClosure.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\laravel\\tinker\\config\\tinker.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\laravel\\tinker\\src\\TinkerCaster.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Delimiter\\DelimiterParser.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Delimiter\\DelimiterStack.php",
+            "removed": 23
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Delimiter\\Processor\\StaggeredDelimiterProcessor.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Environment\\Environment.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\Attributes\\Parser\\AttributesBlockContinueParser.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\Attributes\\Util\\AttributesHelper.php",
+            "removed": 11
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\Autolink\\EmailAutolinkParser.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\Autolink\\UrlAutolinkParser.php",
+            "removed": 12
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\CommonMark\\CommonMarkCoreExtension.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\CommonMark\\Delimiter\\Processor\\EmphasisDelimiterProcessor.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\CommonMark\\Node\\Block\\HtmlBlock.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\CommonMark\\Parser\\Block\\FencedCodeParser.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\CommonMark\\Parser\\Block\\FencedCodeStartParser.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\CommonMark\\Parser\\Block\\HtmlBlockParser.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\CommonMark\\Parser\\Block\\HtmlBlockStartParser.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\CommonMark\\Parser\\Block\\IndentedCodeParser.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\CommonMark\\Parser\\Block\\ListBlockParser.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\CommonMark\\Parser\\Block\\ListBlockStartParser.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\CommonMark\\Parser\\Block\\ListItemParser.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\CommonMark\\Parser\\Block\\ThematicBreakParser.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\CommonMark\\Parser\\Block\\ThematicBreakStartParser.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\CommonMark\\Parser\\Inline\\BacktickParser.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\CommonMark\\Parser\\Inline\\BangParser.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\CommonMark\\Parser\\Inline\\CloseBracketParser.php",
+            "removed": 16
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\CommonMark\\Parser\\Inline\\OpenBracketParser.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\DefaultAttributes\\ApplyDefaultAttributesProcessor.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\DescriptionList\\Event\\ConsecutiveDescriptionListMerger.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\DescriptionList\\Event\\LooseDescriptionHandler.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\DescriptionList\\Parser\\DescriptionContinueParser.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\DescriptionList\\Parser\\DescriptionStartParser.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\DisallowedRawHtml\\DisallowedRawHtmlRenderer.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\Embed\\EmbedStartParser.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\ExternalLink\\ExternalLinkProcessor.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\Footnote\\Event\\AnonymousFootnotesListener.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\Footnote\\Event\\FixOrphanedFootnotesAndRefsListener.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\Footnote\\Event\\GatherFootnotesListener.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\Footnote\\Event\\NumberFootnotesListener.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\FrontMatter\\FrontMatterParser.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\InlinesOnly\\InlinesOnlyExtension.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\Mention\\MentionParser.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\SmartPunct\\QuoteParser.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\Strikethrough\\StrikethroughDelimiterProcessor.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\Table\\TableParser.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\Table\\TableStartParser.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\TableOfContents\\Normalizer\\AsIsNormalizerStrategy.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\TableOfContents\\Normalizer\\RelativeNormalizerStrategy.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\TableOfContents\\TableOfContentsBuilder.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\TableOfContents\\TableOfContentsExtension.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\TableOfContents\\TableOfContentsGenerator.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\TableOfContents\\TableOfContentsPlaceholderParser.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Extension\\TaskList\\TaskListItemMarkerParser.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Input\\MarkdownInput.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Node\\Inline\\AdjacentTextMerger.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Node\\Inline\\Newline.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Node\\Node.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Node\\NodeIterator.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Normalizer\\SlugNormalizer.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Normalizer\\TextNormalizer.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Normalizer\\UniqueSlugNormalizer.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Parser\\Block\\DocumentBlockParser.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Parser\\Cursor.php",
+            "removed": 14
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Parser\\Inline\\NewlineParser.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Parser\\InlineParserEngine.php",
+            "removed": 15
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Parser\\MarkdownParser.php",
+            "removed": 14
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Reference\\MemoryLimitedReferenceMap.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Reference\\ReferenceMap.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Reference\\ReferenceParser.php",
+            "removed": 25
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Renderer\\Block\\ParagraphRenderer.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Util\\Html5EntityDecoder.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Util\\HtmlFilter.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Util\\LinkParserHelper.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Util\\RegexHelper.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Util\\SpecReader.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Util\\UrlEncoder.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\commonmark\\src\\Xml\\XmlRenderer.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\league\\uri\\BaseUri.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\league\\uri\\Uri.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\league\\uri\\UriTemplate\\Operator.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\league\\uri-interfaces\\Idna\\Converter.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\league\\uri-interfaces\\UriString.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\mockery\\mockery\\library\\Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegration.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\mockery\\mockery\\library\\Mockery\\Adapter\\Phpunit\\TestListenerTrait.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\mockery\\mockery\\library\\Mockery\\Container.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\mockery\\mockery\\library\\Mockery\\Exception\\BadMethodCallException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\mockery\\mockery\\library\\Mockery\\Expectation.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\mockery\\mockery\\library\\Mockery\\Generator\\MockConfigurationBuilder.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\mockery\\mockery\\library\\Mockery\\Generator\\StringManipulation\\Pass\\InstanceMockPass.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\mockery\\mockery\\library\\Mockery\\Generator\\StringManipulation\\Pass\\MethodDefinitionPass.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\mockery\\mockery\\library\\Mockery\\Mock.php",
+            "removed": 10
+        },
+        {
+            "path": "vendor\\mockery\\mockery\\library\\Mockery\\Reflector.php",
+            "removed": 12
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\DateTimeImmutable.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\ErrorHandler.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Formatter\\ChromePHPFormatter.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Formatter\\ElasticaFormatter.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Formatter\\ElasticsearchFormatter.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Formatter\\GelfMessageFormatter.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Formatter\\GoogleCloudLoggingFormatter.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Formatter\\JsonFormatter.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Formatter\\LineFormatter.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Formatter\\LogstashFormatter.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Formatter\\NormalizerFormatter.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Formatter\\WildfireFormatter.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Handler\\AbstractSyslogHandler.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Handler\\BrowserConsoleHandler.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Handler\\BufferHandler.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Handler\\DeduplicationHandler.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Handler\\ElasticsearchHandler.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Handler\\FallbackGroupHandler.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Handler\\FingersCrossedHandler.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Handler\\FirePHPHandler.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Handler\\Handler.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Handler\\OverflowHandler.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Handler\\PushoverHandler.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Handler\\RollbarHandler.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Handler\\RotatingFileHandler.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Handler\\SendGridHandler.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Handler\\Slack\\SlackRecord.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Handler\\SocketHandler.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Handler\\StreamHandler.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Handler\\SyslogUdp\\UdpSocket.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Handler\\SyslogUdpHandler.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Handler\\WhatFailureGroupHandler.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\JsonSerializableDateTimeImmutable.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Logger.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\LogRecord.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Processor\\GitProcessor.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Processor\\IntrospectionProcessor.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Processor\\MercurialProcessor.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Processor\\PsrLogMessageProcessor.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Processor\\WebProcessor.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\monolog\\monolog\\src\\Monolog\\Utils.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\myclabs\\deep-copy\\src\\DeepCopy\\DeepCopy.php",
+            "removed": 12
+        },
+        {
+            "path": "vendor\\myclabs\\deep-copy\\src\\DeepCopy\\Filter\\KeepFilter.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\myclabs\\deep-copy\\src\\DeepCopy\\Matcher\\PropertyTypeMatcher.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\myclabs\\deep-copy\\src\\DeepCopy\\TypeFilter\\Spl\\SplDoublyLinkedListFilter.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\sponsors.php",
+            "removed": 14
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\AbstractTranslator.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\CarbonInterface.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\CarbonInterval.php",
+            "removed": 29
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\CarbonPeriod.php",
+            "removed": 12
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\CarbonTimeZone.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Exceptions\\BadMethodCallException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Exceptions\\EndLessPeriodException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Exceptions\\Exception.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Exceptions\\InvalidArgumentException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Exceptions\\InvalidCastException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Exceptions\\InvalidFormatException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Exceptions\\InvalidIntervalException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Exceptions\\InvalidPeriodDateException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Exceptions\\InvalidPeriodParameterException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Exceptions\\InvalidTimeZoneException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Exceptions\\InvalidTypeException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Exceptions\\NotAPeriodException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Exceptions\\OutOfRangeException.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Exceptions\\RuntimeException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Exceptions\\UnitException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Exceptions\\UnreachableException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Factory.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Lang\\ar_Shakl.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Lang\\be.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Lang\\ca_ES_Valencia.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Lang\\ewo.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Lang\\fr.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Lang\\ka.php",
+            "removed": 28
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Lang\\kam.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Lang\\lb.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Lang\\luy.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Lang\\lv.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Lang\\oc.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Lang\\sr_Cyrl_BA.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Lang\\sr_Cyrl_ME.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Lang\\sr_Cyrl_XK.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Lang\\sr_Latn_BA.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Lang\\sr_Latn_ME.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Lang\\sr_Latn_XK.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Lang\\unm_US.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Lang\\ve_ZA.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Laravel\\ServiceProvider.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\MessageFormatter\\MessageFormatterMapper.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Month.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Traits\\Comparison.php",
+            "removed": 13
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Traits\\Creator.php",
+            "removed": 11
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Traits\\Date.php",
+            "removed": 135
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Traits\\Difference.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Traits\\Localization.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Traits\\Mixin.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Traits\\Options.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Traits\\Rounding.php",
+            "removed": 10
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Traits\\Serialization.php",
+            "removed": 14
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Traits\\StaticOptions.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Traits\\Test.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Traits\\Units.php",
+            "removed": 21
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\Translator.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nesbot\\carbon\\src\\Carbon\\WeekDay.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\nette\\utils\\src\\Utils\\Html.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\nette\\utils\\src\\Utils\\Reflection.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nette\\utils\\src\\Utils\\Strings.php",
+            "removed": 13
+        },
+        {
+            "path": "vendor\\nette\\utils\\src\\Utils\\Validators.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Builder\\Interface_.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\BuilderHelpers.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Comment.php",
+            "removed": 31
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\compatibility_tokens.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\ConstExprEvaluator.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Internal\\PrintableNewAnonClassNode.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Internal\\TokenPolyfill.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Internal\\TokenStream.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Lexer\\Emulative.php",
+            "removed": 14
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Lexer\\TokenEmulator\\AttributeEmulator.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Lexer\\TokenEmulator\\ExplicitOctalEmulator.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Lexer\\TokenEmulator\\NullsafeTokenEmulator.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Lexer\\TokenEmulator\\ReadonlyFunctionTokenEmulator.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Lexer\\TokenEmulator\\ReadonlyTokenEmulator.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Lexer.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\NameContext.php",
+            "removed": 23
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Node\\ArrayItem.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Node\\ClosureUse.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Node\\DeclareItem.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Node\\Expr\\Array_.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Node\\Expr\\Cast\\Bool_.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Node\\Expr\\Cast\\Double.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Node\\Expr\\Cast\\Int_.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Node\\Expr\\Cast\\String_.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Node\\Expr\\List_.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Node\\InterpolatedStringPart.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Node\\Name.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Node\\PropertyItem.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Node\\Scalar\\Float_.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Node\\Scalar\\InterpolatedString.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Node\\Scalar\\Int_.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Node\\Scalar\\String_.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Node\\StaticVar.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\Node\\UseItem.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\NodeAbstract.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\NodeDumper.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\NodeVisitor\\CommentAnnotatingVisitor.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\NodeVisitor\\NameResolver.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\ParserAbstract.php",
+            "removed": 55
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\PrettyPrinter\\Standard.php",
+            "removed": 42
+        },
+        {
+            "path": "vendor\\nikic\\php-parser\\lib\\PhpParser\\PrettyPrinterAbstract.php",
+            "removed": 83
+        },
+        {
+            "path": "vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\Commands\\TestCommand.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\nunomaduro\\collision\\src\\Adapters\\Phpunit\\Printers\\DefaultPrinter.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nunomaduro\\collision\\src\\Adapters\\Phpunit\\Printers\\ReportablePrinter.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nunomaduro\\collision\\src\\Adapters\\Phpunit\\Subscribers\\EnsurePrinterIsRegisteredSubscriber.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\nunomaduro\\collision\\src\\Adapters\\Phpunit\\TestResult.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\nunomaduro\\collision\\src\\ConsoleColor.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nunomaduro\\collision\\src\\Exceptions\\InvalidStyleException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nunomaduro\\collision\\src\\Exceptions\\TestException.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nunomaduro\\collision\\src\\Exceptions\\TestOutcome.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nunomaduro\\collision\\src\\Highlighter.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nunomaduro\\collision\\src\\Writer.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\nunomaduro\\termwind\\src\\Actions\\StyleToMethod.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nunomaduro\\termwind\\src\\Components\\Element.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nunomaduro\\termwind\\src\\Components\\Span.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nunomaduro\\termwind\\src\\Html\\InheritStyles.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nunomaduro\\termwind\\src\\Html\\TableRenderer.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\nunomaduro\\termwind\\src\\HtmlRenderer.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\nunomaduro\\termwind\\src\\ValueObjects\\Style.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\nunomaduro\\termwind\\src\\ValueObjects\\Styles.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\phar-io\\manifest\\.php-cs-fixer.dist.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\phpoption\\phpoption\\src\\PhpOption\\None.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\phpoption\\phpoption\\src\\PhpOption\\Option.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\phpunit\\php-code-coverage\\src\\Data\\ProcessedCodeCoverageData.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\phpunit\\php-code-coverage\\src\\Data\\RawCodeCoverageData.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\phpunit\\php-code-coverage\\src\\Node\\Builder.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\phpunit\\php-code-coverage\\src\\Report\\Clover.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\phpunit\\php-code-coverage\\src\\Report\\Html\\Renderer\\File.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\phpunit\\php-code-coverage\\src\\Report\\Html\\Renderer\\Template\\js\\bootstrap.bundle.min.js",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\phpunit\\php-code-coverage\\src\\Report\\Html\\Renderer\\Template\\js\\file.js",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\phpunit\\php-code-coverage\\src\\StaticAnalysis\\IgnoredLinesFindingVisitor.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\phpunit\\php-code-coverage\\src\\StaticAnalysis\\ParsingFileAnalyser.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\phpunit\\php-file-iterator\\src\\Factory.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\phpunit\\php-file-iterator\\src\\Iterator.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\phpunit\\php-invoker\\src\\Invoker.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\phpunit\\php-timer\\src\\ResourceUsageFormatter.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Event\\Dispatcher\\CollectingDispatcher.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Event\\Dispatcher\\DirectDispatcher.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Event\\Facade.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Framework\\Constraint\\Cardinality\\Count.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Framework\\Constraint\\Equality\\IsEqual.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Framework\\Constraint\\Equality\\IsEqualCanonicalizing.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Framework\\Constraint\\Equality\\IsEqualIgnoringCase.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Framework\\Constraint\\Equality\\IsEqualWithDelta.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Framework\\Constraint\\IsIdentical.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Framework\\Constraint\\String\\StringMatchesFormatDescription.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Framework\\DataProviderTestSuite.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Framework\\ExecutionOrderDependency.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Framework\\MockObject\\Generator\\Generator.php",
+            "removed": 16
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Framework\\MockObject\\Generator\\MockMethod.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Framework\\MockObject\\MockBuilder.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Framework\\MockObject\\Runtime\\Api\\MockObjectApi.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Framework\\MockObject\\Runtime\\ReturnValueGenerator.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Framework\\MockObject\\Runtime\\Rule\\Parameters.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Framework\\TestCase.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Framework\\TestRunner\\ChildProcessResultProcessor.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Framework\\TestRunner\\SeparateProcessTestRunner.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Framework\\TestSuite.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Logging\\TeamCity\\TeamCityLogger.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Logging\\TestDox\\NamePrettifier.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Metadata\\Parser\\Annotation\\DocBlock.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Metadata\\Parser\\Annotation\\Registry.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Runner\\Filter\\NameFilterIterator.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Runner\\PHPT\\PhptTestCase.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Runner\\TestSuiteSorter.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\TextUI\\Application.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\TextUI\\Command\\Commands\\CheckPhpConfigurationCommand.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\TextUI\\Command\\Commands\\GenerateConfigurationCommand.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\TextUI\\Configuration\\Registry.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\TextUI\\Configuration\\Xml\\Loader.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\TextUI\\Output\\TestDox\\ResultPrinter.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Util\\ExcludeList.php",
+            "removed": 30
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Util\\Filter.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Util\\GlobalState.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Util\\Json.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\phpunit\\phpunit\\src\\Util\\PHP\\DefaultJobRunner.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\psr\\log\\src\\NullLogger.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\CodeCleaner\\CalledClassPass.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\CodeCleaner\\CodeCleanerPass.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\CodeCleaner\\EmptyArrayDimFetchPass.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\CodeCleaner\\FunctionContextPass.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\CodeCleaner\\ImplicitReturnPass.php",
+            "removed": 18
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\CodeCleaner\\ImplicitUsePass.php",
+            "removed": 10
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\CodeCleaner\\LabelContextPass.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\CodeCleaner\\ListPass.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\CodeCleaner\\LoopContextPass.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\CodeCleaner\\NamespacePass.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\CodeCleaner\\PassableByReferencePass.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\CodeCleaner\\RequirePass.php",
+            "removed": 12
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\CodeCleaner\\ReturnTypePass.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\CodeCleaner\\StrictTypesPass.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\CodeCleaner\\UseStatementPass.php",
+            "removed": 11
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\CodeCleaner\\ValidClassNamePass.php",
+            "removed": 10
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\CodeCleaner\\ValidConstructorPass.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\CodeCleaner\\ValidFunctionNamePass.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\CodeCleaner.php",
+            "removed": 39
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\CodeArgumentParser.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\Command.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\DocCommand.php",
+            "removed": 12
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\EditCommand.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\HelpCommand.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\HistoryCommand.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\ListCommand\\ClassConstantEnumerator.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\ListCommand\\ClassEnumerator.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\ListCommand\\ConstantEnumerator.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\ListCommand\\Enumerator.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\ListCommand\\FunctionEnumerator.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\ListCommand\\GlobalVariableEnumerator.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\ListCommand\\MethodEnumerator.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\ListCommand\\PropertyEnumerator.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\ListCommand\\VariableEnumerator.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\ListCommand.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\ReflectingCommand.php",
+            "removed": 11
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\ShowCommand.php",
+            "removed": 17
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\SudoCommand.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\ThrowUpCommand.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\TimeitCommand\\TimeitVisitor.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\TimeitCommand.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Command\\WtfCommand.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\ConfigPaths.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Configuration.php",
+            "removed": 73
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Context.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Exception\\DeprecatedException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Exception\\FatalErrorException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\ExecutionClosure.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\ExecutionLoop\\ProcessForker.php",
+            "removed": 38
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\ExecutionLoop\\RunkitReloader.php",
+            "removed": 13
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\ExecutionLoop\\SignalHandler.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\ExecutionLoopClosure.php",
+            "removed": 13
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Formatter\\CodeFormatter.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Formatter\\LinkFormatter.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Formatter\\ManualFormatter.php",
+            "removed": 31
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Formatter\\ManualWrapper.php",
+            "removed": 25
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Formatter\\SignatureFormatter.php",
+            "removed": 14
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Formatter\\TraceFormatter.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\functions.php",
+            "removed": 29
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Input\\ShellInput.php",
+            "removed": 20
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Logger\\CallbackLogger.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Manual\\V2Manual.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Manual\\V3Manual.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\ManualUpdater\\GhChecker.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\ManualUpdater\\GhDownloader.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\ManualUpdater\\GitHubChecker.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\ManualUpdater\\Installer.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\ManualUpdater\\IntervalChecker.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\ManualUpdater\\ManualUpdate.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Output\\PassthruPager.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Output\\ProcOutputPager.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Output\\ShellOutput.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Output\\Theme.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Readline\\GNUReadline.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Readline\\Hoa\\Console.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Readline\\Hoa\\ConsoleCursor.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Readline\\Hoa\\ConsoleTput.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Readline\\Hoa\\ConsoleWindow.php",
+            "removed": 12
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Readline\\Hoa\\File.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Readline\\Hoa\\FileDirectory.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Readline\\Hoa\\FileFinder.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Readline\\Hoa\\Protocol.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Readline\\Hoa\\Readline.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Readline\\Hoa\\Stream.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Readline\\Hoa\\Ustring.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Readline\\Hoa\\Xcallable.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Readline\\Libedit.php",
+            "removed": 11
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Readline\\Transient.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Readline\\Userland.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Reflection\\ReflectionConstant.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Shell.php",
+            "removed": 51
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Sudo\\SudoVisitor.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Sudo.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\TabCompletion\\AutoCompleter.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\TabCompletion\\AutoloadWarmer\\ComposerAutoloadWarmer.php",
+            "removed": 42
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\TabCompletion\\Matcher\\ClassAttributesMatcher.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\TabCompletion\\Matcher\\ClassMethodDefaultParametersMatcher.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\TabCompletion\\Matcher\\ClassMethodsMatcher.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\TabCompletion\\Matcher\\ClassNamesMatcher.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\TabCompletion\\Matcher\\KeywordsMatcher.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\TabCompletion\\Matcher\\MongoClientMatcher.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\TabCompletion\\Matcher\\MongoDatabaseMatcher.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\TabCompletion\\Matcher\\ObjectAttributesMatcher.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\TabCompletion\\Matcher\\ObjectMethodsMatcher.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Util\\Docblock.php",
+            "removed": 15
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Util\\Mirror.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\Util\\Str.php",
+            "removed": 10
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\VarDumper\\Presenter.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\VersionUpdater\\GitHubChecker.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\VersionUpdater\\Installer.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\VersionUpdater\\IntervalChecker.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\psy\\psysh\\src\\VersionUpdater\\SelfUpdate.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\psy\\psysh\\test-logger-demo.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\ramsey\\collection\\src\\AbstractArray.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\ramsey\\collection\\src\\AbstractCollection.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\ramsey\\collection\\src\\AbstractSet.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\ramsey\\collection\\src\\Tool\\ValueToStringTrait.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\ramsey\\uuid\\src\\Codec\\GuidStringCodec.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\ramsey\\uuid\\src\\Codec\\OrderedTimeCodec.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\ramsey\\uuid\\src\\Converter\\Time\\GenericTimeConverter.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\ramsey\\uuid\\src\\Converter\\Time\\PhpTimeConverter.php",
+            "removed": 13
+        },
+        {
+            "path": "vendor\\ramsey\\uuid\\src\\Converter\\Time\\UnixTimeConverter.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\ramsey\\uuid\\src\\Fields\\SerializableFieldsTrait.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\ramsey\\uuid\\src\\Generator\\DceSecurityGenerator.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\ramsey\\uuid\\src\\Generator\\DefaultTimeGenerator.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\ramsey\\uuid\\src\\Guid\\Fields.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\ramsey\\uuid\\src\\Lazy\\LazyUuidFromString.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\ramsey\\uuid\\src\\Provider\\Node\\RandomNodeProvider.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\ramsey\\uuid\\src\\Provider\\Node\\SystemNodeProvider.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\ramsey\\uuid\\src\\Rfc4122\\Fields.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\ramsey\\uuid\\src\\Rfc4122\\VariantTrait.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\ramsey\\uuid\\src\\Type\\Decimal.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\ramsey\\uuid\\src\\Type\\Hexadecimal.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\ramsey\\uuid\\src\\Type\\Integer.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\ramsey\\uuid\\src\\Type\\Time.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\ramsey\\uuid\\src\\Uuid.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\ramsey\\uuid\\src\\UuidFactory.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\sebastian\\code-unit\\src\\CodeUnit.php",
+            "removed": 32
+        },
+        {
+            "path": "vendor\\sebastian\\code-unit\\src\\CodeUnitCollection.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\sebastian\\code-unit\\src\\Mapper.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\sebastian\\comparator\\src\\NumericComparator.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\sebastian\\comparator\\src\\ObjectComparator.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\sebastian\\comparator\\src\\ScalarComparator.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\sebastian\\comparator\\src\\TypeComparator.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\sebastian\\complexity\\src\\Calculator.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\sebastian\\diff\\src\\Differ.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\sebastian\\diff\\src\\Output\\StrictUnifiedDiffOutputBuilder.php",
+            "removed": 25
+        },
+        {
+            "path": "vendor\\sebastian\\diff\\src\\Output\\UnifiedDiffOutputBuilder.php",
+            "removed": 20
+        },
+        {
+            "path": "vendor\\sebastian\\diff\\src\\TimeEfficientLongestCommonSubsequenceCalculator.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\sebastian\\environment\\src\\Runtime.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\sebastian\\exporter\\src\\Exporter.php",
+            "removed": 17
+        },
+        {
+            "path": "vendor\\sebastian\\lines-of-code\\src\\Counter.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\staabm\\side-effects-detector\\lib\\functionMetadata.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\staabm\\side-effects-detector\\lib\\SideEffect.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\staabm\\side-effects-detector\\lib\\SideEffectsDetector.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\console\\Application.php",
+            "removed": 28
+        },
+        {
+            "path": "vendor\\symfony\\console\\CI\\GithubActionReporter.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\console\\Command\\Command.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\symfony\\console\\Command\\CompleteCommand.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\console\\Command\\LazyCommand.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\console\\Command\\TraceableCommand.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\console\\Completion\\CompletionInput.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\symfony\\console\\Debug\\CliRequest.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\console\\Descriptor\\ReStructuredTextDescriptor.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\symfony\\console\\Descriptor\\TextDescriptor.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\symfony\\console\\Formatter\\NullOutputFormatter.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\console\\Formatter\\NullOutputFormatterStyle.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\symfony\\console\\Formatter\\OutputFormatter.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\symfony\\console\\Helper\\Helper.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\console\\Helper\\ProgressBar.php",
+            "removed": 10
+        },
+        {
+            "path": "vendor\\symfony\\console\\Helper\\ProgressIndicator.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\console\\Helper\\QuestionHelper.php",
+            "removed": 17
+        },
+        {
+            "path": "vendor\\symfony\\console\\Helper\\Table.php",
+            "removed": 10
+        },
+        {
+            "path": "vendor\\symfony\\console\\Helper\\TableCell.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\console\\Helper\\TerminalInputHelper.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\symfony\\console\\Input\\ArgvInput.php",
+            "removed": 16
+        },
+        {
+            "path": "vendor\\symfony\\console\\Input\\StringInput.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\console\\Logger\\ConsoleLogger.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\console\\Output\\ConsoleOutput.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\console\\Output\\ConsoleSectionOutput.php",
+            "removed": 20
+        },
+        {
+            "path": "vendor\\symfony\\console\\Output\\NullOutput.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\symfony\\console\\Output\\StreamOutput.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\symfony\\console\\Question\\ChoiceQuestion.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\console\\SingleCommandApplication.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\console\\Style\\OutputStyle.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\console\\Style\\SymfonyStyle.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\symfony\\console\\Terminal.php",
+            "removed": 11
+        },
+        {
+            "path": "vendor\\symfony\\console\\Tester\\CommandTester.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\css-selector\\Parser\\Handler\\StringHandler.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\css-selector\\Parser\\Parser.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\css-selector\\Parser\\Shortcut\\ClassParser.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\symfony\\css-selector\\Parser\\Shortcut\\ElementParser.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\symfony\\css-selector\\Parser\\Shortcut\\EmptyStringParser.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\css-selector\\Parser\\Shortcut\\HashParser.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\symfony\\css-selector\\XPath\\Extension\\FunctionExtension.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\symfony\\css-selector\\XPath\\Extension\\HtmlExtension.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\error-handler\\Command\\ErrorDumpCommand.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\error-handler\\Debug.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\error-handler\\DebugClassLoader.php",
+            "removed": 18
+        },
+        {
+            "path": "vendor\\symfony\\error-handler\\Error\\FatalError.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\error-handler\\ErrorEnhancer\\ClassNotFoundErrorEnhancer.php",
+            "removed": 16
+        },
+        {
+            "path": "vendor\\symfony\\error-handler\\ErrorEnhancer\\UndefinedMethodErrorEnhancer.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\error-handler\\ErrorHandler.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\symfony\\error-handler\\ErrorRenderer\\CliErrorRenderer.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\error-handler\\ErrorRenderer\\HtmlErrorRenderer.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\symfony\\error-handler\\Resources\\bin\\extract-tentative-return-types.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\symfony\\event-dispatcher\\Debug\\TraceableEventDispatcher.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\symfony\\event-dispatcher\\DependencyInjection\\RegisterListenersPass.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\finder\\Comparator\\NumberComparator.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\finder\\Iterator\\MultiplePcreFilterIterator.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\finder\\Iterator\\RecursiveDirectoryIterator.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\symfony\\finder\\Iterator\\VcsIgnoredFilterIterator.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\AcceptHeader.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\BinaryFileResponse.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\Cookie.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\File\\UploadedFile.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\HeaderUtils.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\InputBag.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\IpUtils.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\JsonResponse.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\ParameterBag.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\Request.php",
+            "removed": 46
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\Response.php",
+            "removed": 20
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\ResponseHeaderBag.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\ServerBag.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\Session\\Flash\\AutoExpireFlashBag.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\Session\\Session.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\Session\\SessionFactory.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\Session\\Storage\\Handler\\AbstractSessionHandler.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\Session\\Storage\\Handler\\MemcachedSessionHandler.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\Session\\Storage\\Handler\\MigratingSessionHandler.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\Session\\Storage\\Handler\\MongoDbSessionHandler.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\Session\\Storage\\Handler\\NativeFileSessionHandler.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\Session\\Storage\\Handler\\PdoSessionHandler.php",
+            "removed": 46
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\Session\\Storage\\Handler\\SessionHandlerFactory.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\Session\\Storage\\MetadataBag.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\Session\\Storage\\MockArraySessionStorage.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\Session\\Storage\\MockFileSessionStorage.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\Session\\Storage\\MockFileSessionStorageFactory.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\Session\\Storage\\NativeSessionStorage.php",
+            "removed": 11
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\Session\\Storage\\NativeSessionStorageFactory.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\Session\\Storage\\PhpBridgeSessionStorage.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\Session\\Storage\\PhpBridgeSessionStorageFactory.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\Session\\Storage\\Proxy\\SessionHandlerProxy.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\http-foundation\\StreamedJsonResponse.php",
+            "removed": 11
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\Bundle\\AbstractBundle.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\Bundle\\Bundle.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\CacheWarmer\\CacheWarmerAggregate.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\Controller\\ArgumentResolver\\BackedEnumValueResolver.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\Controller\\ArgumentResolver.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\DataCollector\\AjaxDataCollector.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\DataCollector\\DataCollector.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\DataCollector\\DumpDataCollector.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\DataCollector\\LoggerDataCollector.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\DataCollector\\MemoryDataCollector.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\DataCollector\\RequestDataCollector.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\Debug\\TraceableEventDispatcher.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\DependencyInjection\\AddAnnotatedClassesToCachePass.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\DependencyInjection\\RegisterControllerArgumentLocatorsPass.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\DependencyInjection\\RemoveEmptyControllerArgumentLocatorsPass.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\EventListener\\AbstractSessionListener.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\EventListener\\CacheAttributeListener.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\EventListener\\DebugHandlersListener.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\EventListener\\DumpListener.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\EventListener\\ErrorListener.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\EventListener\\FragmentListener.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\EventListener\\LocaleAwareListener.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\EventListener\\LocaleListener.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\EventListener\\ProfilerListener.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\EventListener\\RouterListener.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\Fragment\\FragmentUriGenerator.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\Fragment\\HIncludeFragmentRenderer.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\Fragment\\InlineFragmentRenderer.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\HttpCache\\Esi.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\HttpCache\\HttpCache.php",
+            "removed": 29
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\HttpCache\\ResponseCacheStrategy.php",
+            "removed": 12
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\HttpCache\\Ssi.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\HttpCache\\Store.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\HttpCache\\SubRequestHandler.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\HttpClientKernel.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\HttpKernel.php",
+            "removed": 11
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\HttpKernelBrowser.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\Kernel.php",
+            "removed": 11
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\Profiler\\FileProfilerStorage.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\Profiler\\Profiler.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\http-kernel\\Resources\\welcome.html.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\mailer\\Envelope.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\mailer\\EventListener\\EnvelopeListener.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\mailer\\Mailer.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\symfony\\mailer\\Transport\\NativeTransportFactory.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\mailer\\Transport\\RoundRobinTransport.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\mailer\\Transport\\Smtp\\EsmtpTransport.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\symfony\\mailer\\Transport\\Smtp\\SmtpTransport.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\mailer\\Transport\\Smtp\\Stream\\SocketStream.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\mime\\CharacterStream.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\symfony\\mime\\Crypto\\DkimSigner.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\mime\\Crypto\\SMime.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\symfony\\mime\\Encoder\\QpContentEncoder.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\mime\\Encoder\\QpEncoder.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\symfony\\mime\\FileBinaryMimeTypeGuesser.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\mime\\Header\\AbstractHeader.php",
+            "removed": 18
+        },
+        {
+            "path": "vendor\\symfony\\mime\\Header\\ParameterizedHeader.php",
+            "removed": 16
+        },
+        {
+            "path": "vendor\\symfony\\mime\\Message.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\mime\\MessageConverter.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\mime\\Part\\DataPart.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\mime\\Part\\Multipart\\FormDataPart.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\mime\\Part\\SMimePart.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\mime\\Part\\TextPart.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\polyfill-intl-grapheme\\Grapheme.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\symfony\\polyfill-intl-idn\\Idn.php",
+            "removed": 57
+        },
+        {
+            "path": "vendor\\symfony\\polyfill-intl-normalizer\\Normalizer.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\symfony\\polyfill-mbstring\\Mbstring.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\polyfill-mbstring\\Resources\\unidata\\titleCaseRegexp.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\polyfill-php83\\Php83.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\polyfill-php84\\Php84.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\polyfill-php84\\Resources\\stubs\\ReflectionConstant.php",
+            "removed": 10
+        },
+        {
+            "path": "vendor\\symfony\\polyfill-uuid\\Uuid.php",
+            "removed": 42
+        },
+        {
+            "path": "vendor\\symfony\\process\\Exception\\ProcessStartFailedException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\process\\ExecutableFinder.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\process\\PhpExecutableFinder.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\process\\PhpSubprocess.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\symfony\\process\\Pipes\\AbstractPipes.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\symfony\\process\\Pipes\\UnixPipes.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\symfony\\process\\Pipes\\WindowsPipes.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\symfony\\process\\Process.php",
+            "removed": 29
+        },
+        {
+            "path": "vendor\\symfony\\routing\\Annotation\\Route.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\routing\\Generator\\Dumper\\CompiledUrlGeneratorDumper.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\routing\\Generator\\UrlGenerator.php",
+            "removed": 26
+        },
+        {
+            "path": "vendor\\symfony\\routing\\Loader\\AttributeClassLoader.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\routing\\Loader\\AttributeFileLoader.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\routing\\Loader\\Configurator\\CollectionConfigurator.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\routing\\Loader\\DirectoryLoader.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\routing\\Loader\\ObjectLoader.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\routing\\Loader\\PhpFileLoader.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\routing\\Loader\\Psr4DirectoryLoader.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\routing\\Loader\\XmlFileLoader.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\symfony\\routing\\Loader\\YamlFileLoader.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\routing\\Matcher\\Dumper\\CompiledUrlMatcherDumper.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\routing\\Matcher\\Dumper\\CompiledUrlMatcherTrait.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\routing\\Matcher\\Dumper\\StaticPrefixCollection.php",
+            "removed": 11
+        },
+        {
+            "path": "vendor\\symfony\\routing\\Matcher\\TraceableUrlMatcher.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\routing\\Matcher\\UrlMatcher.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\routing\\RequestContext.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\routing\\Route.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\routing\\RouteCollection.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\routing\\RouteCompiler.php",
+            "removed": 30
+        },
+        {
+            "path": "vendor\\symfony\\routing\\Router.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\service-contracts\\ServiceLocatorTrait.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\string\\AbstractUnicodeString.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\symfony\\string\\ByteString.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\symfony\\string\\Inflector\\EnglishInflector.php",
+            "removed": 188
+        },
+        {
+            "path": "vendor\\symfony\\string\\Inflector\\FrenchInflector.php",
+            "removed": 31
+        },
+        {
+            "path": "vendor\\symfony\\string\\Inflector\\SpanishInflector.php",
+            "removed": 15
+        },
+        {
+            "path": "vendor\\symfony\\string\\Slugger\\AsciiSlugger.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\symfony\\string\\UnicodeString.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\translation\\Catalogue\\AbstractOperation.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\translation\\Catalogue\\TargetOperation.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\symfony\\translation\\Command\\TranslationPullCommand.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\translation\\Command\\TranslationPushCommand.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\symfony\\translation\\Command\\TranslationTrait.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\translation\\Command\\XliffLintCommand.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\symfony\\translation\\DependencyInjection\\TranslatorPass.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\translation\\Dumper\\FileDumper.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\translation\\Dumper\\PoFileDumper.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\translation\\Dumper\\XliffFileDumper.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\translation\\Extractor\\PhpAstExtractor.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\translation\\Extractor\\Visitor\\ConstraintVisitor.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\translation\\Formatter\\IntlFormatter.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\translation\\Formatter\\MessageFormatter.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\translation\\Loader\\FileLoader.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\translation\\Loader\\MoFileLoader.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\translation\\Loader\\PoFileLoader.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\symfony\\translation\\Loader\\XliffFileLoader.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\symfony\\translation\\LocaleSwitcher.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\translation\\MessageCatalogue.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\translation\\Reader\\TranslationReader.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\translation\\Resources\\bin\\translation-status.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\symfony\\translation\\Translator.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\translation\\Util\\XliffUtils.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\translation\\Writer\\TranslationWriter.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\translation-contracts\\Test\\TranslatorTest.php",
+            "removed": 15
+        },
+        {
+            "path": "vendor\\symfony\\translation-contracts\\TranslatorTrait.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\uid\\AbstractUid.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\uid\\BinaryUtil.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\uid\\Uuid.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\symfony\\uid\\UuidV1.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\uid\\UuidV4.php",
+            "removed": 8
+        },
+        {
+            "path": "vendor\\symfony\\uid\\UuidV6.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\uid\\UuidV7.php",
+            "removed": 10
+        },
+        {
+            "path": "vendor\\symfony\\var-dumper\\Caster\\AmqpCaster.php",
+            "removed": 6
+        },
+        {
+            "path": "vendor\\symfony\\var-dumper\\Caster\\Caster.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\var-dumper\\Caster\\ExceptionCaster.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\var-dumper\\Caster\\FFICaster.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\symfony\\var-dumper\\Caster\\LinkStub.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\var-dumper\\Caster\\ReflectionCaster.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\var-dumper\\Caster\\ResourceCaster.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\var-dumper\\Caster\\StubCaster.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\var-dumper\\Caster\\SymfonyCaster.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\var-dumper\\Caster\\XmlReaderCaster.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\var-dumper\\Cloner\\AbstractCloner.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\var-dumper\\Cloner\\Data.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\var-dumper\\Cloner\\VarCloner.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\symfony\\var-dumper\\Dumper\\CliDumper.php",
+            "removed": 10
+        },
+        {
+            "path": "vendor\\symfony\\var-dumper\\Dumper\\HtmlDumper.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\var-dumper\\Server\\DumpServer.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\var-dumper\\VarDumper.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\symfony\\yaml\\Command\\LintCommand.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\symfony\\yaml\\Dumper.php",
+            "removed": 3
+        },
+        {
+            "path": "vendor\\symfony\\yaml\\Escaper.php",
+            "removed": 9
+        },
+        {
+            "path": "vendor\\symfony\\yaml\\Inline.php",
+            "removed": 37
+        },
+        {
+            "path": "vendor\\symfony\\yaml\\Parser.php",
+            "removed": 43
+        },
+        {
+            "path": "vendor\\symfony\\yaml\\Unescaper.php",
+            "removed": 5
+        },
+        {
+            "path": "vendor\\tijsverkoyen\\css-to-inline-styles\\src\\Css\\Processor.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\tijsverkoyen\\css-to-inline-styles\\src\\Css\\Property\\Processor.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\tijsverkoyen\\css-to-inline-styles\\src\\Css\\Rule\\Processor.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\tijsverkoyen\\css-to-inline-styles\\src\\CssToInlineStyles.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\vlucas\\phpdotenv\\src\\Dotenv.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\vlucas\\phpdotenv\\src\\Exception\\ExceptionInterface.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\vlucas\\phpdotenv\\src\\Exception\\InvalidEncodingException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\vlucas\\phpdotenv\\src\\Exception\\InvalidFileException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\vlucas\\phpdotenv\\src\\Exception\\InvalidPathException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\vlucas\\phpdotenv\\src\\Exception\\ValidationException.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\vlucas\\phpdotenv\\src\\Loader\\Resolver.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\vlucas\\phpdotenv\\src\\Parser\\EntryParser.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\vlucas\\phpdotenv\\src\\Parser\\Lexer.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\vlucas\\phpdotenv\\src\\Parser\\Lines.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\vlucas\\phpdotenv\\src\\Repository\\Adapter\\ApacheAdapter.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\vlucas\\phpdotenv\\src\\Repository\\Adapter\\EnvConstAdapter.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\vlucas\\phpdotenv\\src\\Repository\\Adapter\\GuardedWriter.php",
+            "removed": 4
+        },
+        {
+            "path": "vendor\\vlucas\\phpdotenv\\src\\Repository\\Adapter\\ImmutableWriter.php",
+            "removed": 7
+        },
+        {
+            "path": "vendor\\vlucas\\phpdotenv\\src\\Repository\\Adapter\\PutenvAdapter.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\vlucas\\phpdotenv\\src\\Repository\\Adapter\\ReplacingWriter.php",
+            "removed": 2
+        },
+        {
+            "path": "vendor\\vlucas\\phpdotenv\\src\\Repository\\Adapter\\ServerConstAdapter.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\vlucas\\phpdotenv\\src\\Store\\File\\Paths.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\vlucas\\phpdotenv\\src\\Store\\File\\Reader.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\vlucas\\phpdotenv\\src\\Util\\Regex.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\vlucas\\phpdotenv\\src\\Util\\Str.php",
+            "removed": 1
+        },
+        {
+            "path": "vendor\\voku\\portable-ascii\\src\\voku\\helper\\ASCII.php",
+            "removed": 57
+        },
+        {
+            "path": "vendor\\voku\\portable-ascii\\src\\voku\\helper\\data\\ascii_by_languages.php",
+            "removed": 59
+        },
+        {
+            "path": "vendor\\voku\\portable-ascii\\src\\voku\\helper\\data\\ascii_extras_by_languages.php",
+            "removed": 54
+        }
+    ]
+}

@@ -57,3 +57,33 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+---
+
+## Local Setup: Migrations & Seeders
+
+If you encounter issues with user logins (e.g., couriers or admins can't sign in), it's usually because the database schema or seed data isn't set up properly.
+
+1. Ensure your .env is configured properly (DB connection, etc.)
+2. Run migrations:
+
+	php artisan migrate
+
+3. Re-seed default users + services (this will create default admin, courier and customer users):
+
+	php artisan db:seed --class=AdminUserSeeder
+
+This will ensure the `users.role` column exists and that seeded users are created with hashed passwords (bcrypt) so Auth::attempt works correctly.
+
+## Troubleshooting login errors
+
+- "Email atau Password tidak cocok": user typed wrong credentials — try resetting the password from the admin area, or re-seed.
+- "This password does not use the Bcrypt algorithm": adds that the password stored in database appears to be plaintext or non-bcrypt hash. Reset the affected user's password via tinker or an admin UI:
+
+  php artisan tinker
+  $u = \App\Models\User::where('email', 'courier@powerwash.com')->first();
+  $u->password = Hash::make('12345678');
+  $u->save();
+
+  And then login using the new password.
+

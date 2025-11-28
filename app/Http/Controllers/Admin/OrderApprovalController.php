@@ -8,13 +8,16 @@ use App\Models\Order;
 use App\Models\Service;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\OrderConfirmationMail;
 
 class OrderApprovalController extends Controller
 {
     // List orders awaiting approval (status = 'pending')
     public function index()
     {
-        $query = Order::with('service')->where('status', 'pending');
+        // Include orders that are 'pending' but also those waiting for customer confirmation so admin can track them
+        $query = Order::with('service')->whereIn('status', ['pending', 'awaiting_confirmation']);
 
         // optional filter: ?confirmed=1 or ?confirmed=0
         $confirmed = request()->query('confirmed');
@@ -53,8 +56,19 @@ class OrderApprovalController extends Controller
     {
         $order = Order::with('service')->findOrFail($id);
 
+        // Basic validation for payment_method (admin can set it here as override if necessary)
+        $request->validate([
+            'payment_method' => 'nullable|string|in:Bayar Nanti,Tunai,QRIS',
+        ]);
+
+        // If admin submitted an actual_weight with the approval form, use it (admin measured),
+        // otherwise fall back to previously saved actual_weight.
         $servicePrice = $order->service->price_per_kg ?? 0;
-        $actualWeight = (float) $order->actual_weight;
+        $actualWeight = (float) ($request->input('actual_weight') ?? $order->actual_weight);
+        // If actual weight was provided in request, save it to the order
+        if ($request->has('actual_weight') && is_numeric($request->input('actual_weight'))) {
+            $order->actual_weight = (float) $request->input('actual_weight');
+        }
         // jika pesanan walk-in (kasir cepat), tidak ada ongkir
         $shipping = ($order->is_walk_in ?? false) ? 0 : 6000; // ongkir flat untuk delivery
 
@@ -67,12 +81,26 @@ class OrderApprovalController extends Controller
         }
         $order->approved_at = now();
 
-        // Jika metode pembayaran adalah 'Bayar Nanti', simpan harga final dan buat token konfirmasi
-        // Namun biarkan status tetap 'pending' — konfirmasi harga dilakukan oleh pelanggan.
+        // Ensure we have a payment_method set; if not, allow admin to specify it via form
+        $order->payment_method = $request->input('payment_method') ?? $order->payment_method ?? 'Bayar Nanti';
+
+        // Jika metode pembayaran adalah 'Bayar Nanti', simpan harga final
+        // Admin bisa memilih untuk 'skip confirmation' agar tidak mengirim token dan langsung lanjutkan.
         if (($order->payment_method ?? '') === 'Bayar Nanti') {
-            $order->confirmation_token = \Illuminate\Support\Str::random(60);
             $order->customer_confirmed = false;
             $order->customer_confirmed_at = null;
+            $skip = $request->boolean('skip_confirmation');
+            if ($skip) {
+                // Admin is bypassing customer confirmation intentionally
+                $order->customer_confirmed = true;
+                $order->customer_confirmed_at = now();
+                $order->confirmation_token = null;
+                $order->status = 'processing';
+            } else {
+                // Default behavior: create a token and await customer confirmation
+                $order->confirmation_token = \Illuminate\Support\Str::random(60);
+                $order->status = 'awaiting_confirmation';
+            }
         } else {
             // metode langsung bayar (Tunai/QRIS) -> tandai lunas
             $order->status = 'paid';
@@ -80,9 +108,18 @@ class OrderApprovalController extends Controller
 
         $order->save();
 
-        // If token created, include link in flash so admin can copy/send to customer
+        // If token created and admin didn't skip, include link in flash so admin can copy/send to the customer
         if (!empty($order->confirmation_token)) {
             $link = route('order.confirm.show', ['token' => $order->confirmation_token]);
+            // Try to email the confirmation link to the customer. If sending fails we will still
+            // show the link in the flash message for the admin to copy manually.
+            try {
+                if ($order->customer && $order->customer->email) {
+                    Mail::to($order->customer->email)->send(new OrderConfirmationMail($order));
+                }
+            } catch (\Throwable $e) {
+                \Illuminate\Support\Facades\Log::warning('Failed to send order confirmation email to customer for Order: ' . $order->id . '. Error: ' . $e->getMessage());
+            }
             return redirect()->route('admin.orders.pending')->with('success', 'Order disetujui dan harga final disimpan. Link konfirmasi pelanggan: ' . $link);
         }
 

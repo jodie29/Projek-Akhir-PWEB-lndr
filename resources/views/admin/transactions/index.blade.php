@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<h2 class="text-2xl font-semibold mb-4">Daftar Transaksi</h2>
+
+<x-header-illustration title="Daftar Transaksi" :image="'https://static.vecteezy.com/system/resources/previews/026/721/193/non_2x/washing-machine-and-laundry-laundry-sticker-png.png'"/> 
 
 <a href="{{ route('transactions.create') }}" 
    class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">

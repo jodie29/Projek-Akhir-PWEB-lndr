@@ -29,6 +29,17 @@ class OrderCollectionController extends Controller
         $order->collected_by = Auth::id();
         $order->collected_at = now();
 
+        // Create transaction record for admin-collected payments (cashier)
+        \App\Models\Transaction::create([
+            'order_id' => $order->id,
+            'type' => 'collection',
+            'amount' => $data['collected_amount'],
+            'method' => $data['collection_method'] ?? $data['payment_method'] ?? 'Tunai',
+            'created_by' => Auth::id(),
+            'collected_at' => now(),
+            'notes' => 'Collected by admin: ' . Auth::id()
+        ]);
+
         if ((float)$data['collected_amount'] >= (float)$order->total_price) {
             $order->payment_method = $data['collection_method'];
             $order->status = 'paid';

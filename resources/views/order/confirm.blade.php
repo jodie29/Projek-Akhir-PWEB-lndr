@@ -12,17 +12,20 @@
         <div class="card-body">
             <p><strong>Nomor Pesanan:</strong> {{ $order->order_number }}</p>
             <p><strong>Layanan:</strong> {{ $order->service->name ?? '-' }}</p>
-            <p><strong>Berat Aktual:</strong> {{ $order->actual_weight }} kg</p>
+            <p><strong>Berat Aktual:</strong> {{ $order->actual_weight ?? 'Belum diukur' }} {{ $order->actual_weight ? 'kg' : '' }}</p>
             <p><strong>Total Harga:</strong> Rp {{ number_format($order->total_price, 0, ',', '.') }}</p>
             <p><strong>Status:</strong> {{ $order->status }}</p>
 
+            @if(!$order->customer_confirmed)
+                <p class="text-sm text-gray-600">Setelah Anda mengonfirmasi harga, tagihan pesanan akan dibuat dan status pesanan akan lanjut diproses oleh pihak laundry (status akan berubah menjadi <strong>Sedang Diproses</strong>).</p>
+            @endif
             @if(!$order->customer_confirmed)
                 <form method="POST" action="{{ route('order.confirm.confirm', ['token' => $order->confirmation_token]) }}">
                     @csrf
                     <button class="btn btn-primary">Saya Setuju dengan Harga</button>
                 </form>
             @else
-                <div class="alert alert-info">Anda telah mengonfirmasi harga pada {{ $order->customer_confirmed_at }}</div>
+                <div class="alert alert-info">Anda telah mengonfirmasi harga pada {{ $order->customer_confirmed_at }} — Tagihan telah dibuat.</div>
             @endif
         </div>
     </div>

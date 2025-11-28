@@ -85,6 +85,19 @@ return [
     'faker_locale' => env('APP_FAKER_LOCALE', 'en_US'),
 
     /*
+    |-------------------------------------------------------------------------
+    | Session / Single Tab Enforcement
+    |-------------------------------------------------------------------------
+    |
+    | Allows the application to enforce single-tab sessions. When enabled,
+    | protected pages opened in a new tab will trigger a server logout to
+    | mitigate accidental session sharing. Default is disabled.
+    |
+    */
+
+    'session_enforce_single_tab' => env('SESSION_ENFORCE_SINGLE_TAB', false),
+
+    /*
     |--------------------------------------------------------------------------
     | Encryption Key
     |--------------------------------------------------------------------------

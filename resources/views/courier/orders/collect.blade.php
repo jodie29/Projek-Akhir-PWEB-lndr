@@ -9,12 +9,13 @@
     @endif
 
     <div class="bg-white shadow rounded p-4 mb-4">
-        <p><strong>Layanan:</strong> {{ $order->service->name ?? '-' }}</p>
-        <p><strong>Berat:</strong> {{ $order->actual_weight }} kg</p>
-        <p><strong>Total yang harus dibayar:</strong> Rp {{ number_format($order->total_price,0,',','.') }}</p>
+    <x-header-illustration title="Catat Pembayaran & Penjemputan" :image="'https://static.vecteezy.com/system/resources/previews/026/721/193/non_2x/washing-machine-and-laundry-laundry-sticker-png.png'"/>
+    <p><strong>Layanan:</strong> {{ $order->service->name ?? '-' }}</p>
+    <p><strong>Berat:</strong> {{ $order->actual_weight ?? 'Belum diukur' }} {{ $order->actual_weight ? 'kg' : '' }}</p>
+    <p><strong>Total yang harus dibayar:</strong> Rp {{ number_format($order->total_price ?? 0,0,',','.') }}</p>
     </div>
 
-    <form action="{{ route('courier.orders.collect.store', $order->id) }}" method="POST" class="bg-white shadow rounded p-4">
+    <form action="{{ route('courier.orders.pickup.store', $order->id) }}" method="POST" class="bg-white shadow rounded p-4">
         @csrf
 
         <div class="mb-4">

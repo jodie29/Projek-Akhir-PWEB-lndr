@@ -2,7 +2,10 @@
 
 @section('content')
 <div class="max-w-5xl mx-auto py-8">
-    <h1 class="text-2xl font-bold mb-4">Pesanan Menunggu Pembayaran</h1>
+    <div class="flex items-center justify-between mb-4">
+        <h1 class="text-2xl font-bold">Pesanan Menunggu Pembayaran</h1>
+        <a href="{{ route('admin.dashboard') }}" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-3 py-2 rounded shadow">Kembali ke Dashboard</a>
+    </div>
 
     @if(session('success'))
         <div class="bg-green-100 text-green-800 px-4 py-2 mb-4">{{ session('success') }}</div>
@@ -24,8 +27,8 @@
                 <tr>
                     <td class="border px-3 py-2">{{ $order->order_number }}</td>
                     <td class="border px-3 py-2">{{ $order->service->name ?? '-' }}</td>
-                    <td class="border px-3 py-2 text-right">{{ $order->actual_weight }}</td>
-                    <td class="border px-3 py-2 text-right">Rp {{ number_format($order->total_price,0,',','.') }}</td>
+                    <td class="border px-3 py-2 text-right">{{ $order->actual_weight ?? '-' }}</td>
+                    <td class="border px-3 py-2 text-right">{{ $order->total_price && $order->total_price > 0 ? 'Rp ' . number_format($order->total_price,0,',','.') : 'Belum Final' }}</td>
                     <td class="border px-3 py-2">
                         <span class="px-2 py-1 bg-green-100 text-green-800 rounded">Ya</span>
                     </td>

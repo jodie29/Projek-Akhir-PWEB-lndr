@@ -19,28 +19,31 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Pilihan Layanan -->
                     <div>
-                        <label for="service_type" class="block text-sm font-medium text-gray-700 mb-2">Pilih Jenis Layanan <span class="text-red-500">*</span></label>
-                        <select id="service_type" name="service_type" required class="mt-1 block w-full pl-3 pr-10 py-3 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-lg shadow-sm">
+                        <label for="service_id" class="block text-sm font-medium text-gray-700 mb-2">Pilih Jenis Layanan <span class="text-red-500">*</span></label>
+                        <select id="service_id" name="service_id" required class="mt-1 block w-full pl-3 pr-10 py-3 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-lg shadow-sm">
                             <option value="">-- Pilih Layanan --</option>
-                            <option value="cuci_kering">Cuci Kering (Reguler)</option>
-                            <option value="cuci_setrika">Cuci Kering + Setrika</option>
-                            <option value="setrika_saja">Setrika Saja</option>
-                            <option value="kilat" class="font-semibold text-red-600">Layanan Kilat (24 Jam)</option>
+                            @foreach($services as $service)
+                                <option value="{{ $service->id }}">{{ $service->name }} (Rp {{ number_format($service->price_per_kg, 0, ',', '.') }}/kg)</option>
+                            @endforeach
                         </select>
                     </div>
 
-                    <!-- Input Estimasi Berat -->
+                    <!-- Pilihan Metode Pembayaran -->
                     <div>
-                        <label for="weight" class="block text-sm font-medium text-gray-700 mb-2">Estimasi Berat (kg) <span class="text-red-500">*</span></label>
-                        <div class="mt-1 relative rounded-lg shadow-sm">
-                            <input type="number" id="weight" name="weight" min="1" required class="block w-full pr-12 py-3 border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Contoh: 5">
-                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                                <span class="text-gray-500 sm:text-sm">
-                                    kg
-                                </span>
-                            </div>
-                        </div>
-                        <p class="mt-1 text-xs text-gray-500">Minimun pesanan adalah 1 kg.</p>
+                        <label for="payment_method" class="block text-sm font-medium text-gray-700 mb-2">Metode Pembayaran <span class="text-gray-500">(Opsional)</span></label>
+                        <select id="payment_method" name="payment_method" class="mt-1 block w-full pl-3 pr-10 py-3 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-lg shadow-sm">
+                            <option value="">-- Pilih Metode Pembayaran --</option>
+                            <option value="Bayar Nanti">Bayar Nanti (Bayar saat pengambilan)</option>
+                            <option value="Tunai">Tunai (Tunai di tempat)</option>
+                            <option value="QRIS">QRIS (Bayar via QR saat pickup)</option>
+                        </select>
+                        <p class="mt-1 text-xs text-gray-500">Pilih metode pembayaran hanya sebagai preferensi — harga akhir akan ditetapkan setelah penimbangan oleh kurir/admin.</p>
+                    </div>
+
+                    <!-- Estimasi Berat dihilangkan dari form pelanggan; admin yang akan menimbang -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Estimasi Berat</label>
+                        <div class="mt-1 text-sm text-gray-500">Berat tidak dimasukkan oleh pelanggan. Kurir atau admin akan menimbang saat penjemputan dan menentukan harga akhir.</div>
                     </div>
                 </div>
             </section>

@@ -2,7 +2,10 @@
 
 @section('content')
 <div class="max-w-5xl mx-auto py-8">
-    <h1 class="text-2xl font-bold mb-4">Tinjau Harga - Pesanan Pending</h1>
+    <div class="flex items-center justify-between mb-4">
+        <h1 class="text-2xl font-bold">Tinjau Harga - Pesanan Pending</h1>
+        <a href="{{ route('admin.dashboard') }}" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-3 py-2 rounded shadow">Kembali ke Dashboard</a>
+    </div>
 
     @if(session('success'))
         <div class="bg-green-100 text-green-800 px-4 py-2 mb-4">{{ session('success') }}</div>
@@ -32,8 +35,8 @@
                 <tr>
                     <td class="border px-3 py-2">{{ $order->order_number }}</td>
                     <td class="border px-3 py-2">{{ $order->service->name ?? '-' }}</td>
-                    <td class="border px-3 py-2 text-right">{{ $order->actual_weight }}</td>
-                    <td class="border px-3 py-2 text-right">Rp {{ number_format(($order->service->price_per_kg ?? 0) * $order->actual_weight, 0, ',', '.') }}</td>
+                    <td class="border px-3 py-2 text-right">{{ $order->actual_weight ?? '-' }}</td>
+                    <td class="border px-3 py-2 text-right">{{ $order->actual_weight ? 'Rp ' . number_format(($order->service->price_per_kg ?? 0) * $order->actual_weight, 0, ',', '.') : '-' }}</td>
                     <td class="border px-3 py-2">{{ $order->payment_method ?? '-' }}</td>
                     <td class="border px-3 py-2">
                         @if($order->customer_confirmed ?? false)
@@ -46,7 +49,15 @@
                         {{ $order->customer_confirmed_at ? $order->customer_confirmed_at->format('d-m-Y H:i') : '-' }}
                     </td>
                     <td class="border px-3 py-2">
-                        <a href="{{ route('admin.orders.review', $order->id) }}" class="px-3 py-1 bg-blue-600 text-white rounded">Tinjau</a>
+                        <div class="flex gap-2">
+                            <a href="{{ route('admin.orders.review', $order->id) }}" class="px-3 py-1 bg-blue-600 text-white rounded">Tinjau</a>
+                            @if($order->status === 'awaiting_confirmation' && !empty($order->confirmation_token))
+                                <form method="POST" action="{{ route('admin.orders.resend_confirmation', $order->id) }}" onsubmit="return confirm('Kirim ulang email konfirmasi ke pelanggan?')">
+                                    @csrf
+                                    <button class="px-3 py-1 bg-indigo-600 text-white rounded">Kirim Ulang Konfirmasi</button>
+                                </form>
+                            @endif
+                        </div>
                     </td>
                 </tr>
             @empty

@@ -66,7 +66,7 @@
                     <span class="text-sm text-gray-500 hidden sm:block">
                         Halo, {{ $user_name ?? 'Pelanggan' }}
                     </span>
-                    <form method="POST" action="{{ route('logout') }}">
+                    <form method="POST" action="{{ route('logout') }}" onsubmit="localStorage.removeItem('pw_active_session_v1'); sessionStorage.removeItem('pw_tab_token_v1');">
                         @csrf
                         <button type="submit" class="px-3 py-1 bg-red-500 text-white text-sm rounded-lg hover:bg-red-600 transition duration-150 shadow">
                             Logout
