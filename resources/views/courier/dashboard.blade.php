@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="max-w-6xl mx-auto">
-    <div class="bg-gradient-to-br from-white via-blue-50 to-blue-100 shadow-2xl rounded-2xl p-10">
+    <div class="bg-linear-to-br from-white via-blue-50 to-blue-100 shadow-2xl rounded-2xl p-10">
         <x-header-illustration title="Dashboard Kurir" :subtitle="'Selamat datang, ' . (Auth::user()->name ?? 'Kurir')" :image="'https://static.vecteezy.com/system/resources/previews/026/721/193/non_2x/washing-machine-and-laundry-laundry-sticker-png.png'" titleClass="text-gray-800"/>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
@@ -11,13 +11,6 @@
             <x-stat-card label="Selesai" :value="$completedOrders ?? 0" bgClass="bg-green-50/80" textClass="text-green-700"/>
         </div>
     </div> <!-- end gradient wrapper -->
-    <!-- Chart: Courier earnings last 6 months -->
-    <div class="mt-8">
-        <h3 class="text-xl font-semibold mb-3">Penghasilan 6 Bulan Terakhir</h3>
-        <div class="bg-white p-6 rounded-2xl shadow-md">
-            <canvas id="courierEarningsChart" class="w-full h-48"></canvas>
-        </div>
-    </div>
 
         <!-- Stats -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
@@ -34,54 +27,79 @@
             <div class="text-gray-600">Tidak ada penjemputan untuk Anda saat ini.</div>
         @else
             <div class="overflow-x-auto">
-                <table class="w-full table-auto">
+                <table class="w-full table-auto border-collapse">
                     <thead class="bg-gray-50 text-left">
                         <tr>
-                            <th class="px-3 py-2">No</th>
-                            <th class="px-3 py-2">No Order</th>
-                            <th class="px-3 py-2">Customer</th>
-                            <th class="px-3 py-2">Layanan</th>
-                            <th class="px-3 py-2">Alamat</th>
-                            <th class="px-3 py-2">Berat</th>
-                            <th class="px-3 py-2">Status</th>
-                            <th class="px-3 py-2">Aksi</th>
+                            <th class="border px-3 py-2">No</th>
+                            <th class="border px-3 py-2">No Order</th>
+                            <th class="border px-3 py-2">Customer</th>
+                            <th class="border px-3 py-2">No. HP</th>
+                            <th class="border px-3 py-2">Layanan</th>
+                            <th class="border px-3 py-2">Alamat</th>
+                            <th class="border px-3 py-2">Berat</th>
+                            <th class="border px-3 py-2">Status</th>
+                            <th class="border px-3 py-2 min-w-max">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($pendingPickups as $index => $order)
-                            <tr class="odd:bg-white even:bg-gray-50">
-                                <td class="px-3 py-2">{{ $index + 1 }}</td>
-                                <td class="px-3 py-2">{{ $order->order_number }}</td>
-                                <td class="px-3 py-2">{{ $order->customer->name ?? ($order->customer_name ?? '-') }}</td>
-                                <td class="px-3 py-2">{{ $order->service->name ?? '-' }}</td>
-                                <td class="px-3 py-2">{{ $order->customer->address ?? $order->pickup_address ?? ($order->address ?? '-') }}</td>
-                                <td class="px-3 py-2">{{ $order->actual_weight ?? '-' }} kg</td>
-                                <td class="px-3 py-2">{{ $order->status }}</td>
-                                <td class="px-3 py-2"> 
-                                    <div class="flex gap-2">
+                            <tr class="odd:bg-white even:bg-gray-50 border-b">
+                                <td class="border px-3 py-2">{{ $index + 1 }}</td>
+                                <td class="border px-3 py-2">{{ $order->order_number }}</td>
+                                <td class="border px-3 py-2">{{ $order->customer->name ?? ($order->customer_name ?? '-') }}</td>
+                                <td class="border px-3 py-2">@if($order->customer->phone ?? $order->customer_phone) <a href="tel:{{ $order->customer->phone ?? $order->customer_phone }}" class="text-blue-600">{{ $order->customer->phone ?? $order->customer_phone }}</a> @else - @endif</td>
+                                <td class="border px-3 py-2">{{ $order->service->name ?? '-' }}</td>
+                                <td class="border px-3 py-2">{{ $order->customer->address ?? $order->pickup_address ?? ($order->address ?? '-') }}</td>
+                                <td class="border px-3 py-2">{{ $order->actual_weight ?? '-' }} kg</td>
+                                <td class="border px-3 py-2">
+                                    @if($order->status === 'menunggu_jemput')
+                                        <span class="px-2 py-1 rounded text-xs font-semibold text-white bg-blue-600">Menunggu Jemput</span>
+                                    @elseif($order->status === 'dijemput')
+                                        <span class="px-2 py-1 rounded text-xs font-semibold text-white bg-yellow-600">Dijemput</span>
+                                    @elseif($order->status === 'diantar')
+                                        <span class="px-2 py-1 rounded text-xs font-semibold text-white bg-red-600">Diantar</span>
+                                    @else
+                                        <span class="px-2 py-1 rounded text-xs font-semibold text-white bg-gray-600">{{ ucfirst(str_replace('_', ' ', $order->status)) }}</span>
+                                    @endif
+                                </td>
+                                <td class="border px-3 py-2"> 
+                                    <div class="flex gap-2 flex-wrap">
                                         @php
-                                            $canCollect = ($order->courier_id === Auth::id()) && in_array($order->status, ['approved','awaiting_collection','ready_for_delivery','dijemput']);
+                                            // Allow couriers assigned to the order to record payment when
+                                            // the order is either picked up ('dijemput') or already out
+                                            // for delivery ('diantar'). This enables cash-on-delivery flows.
+                                            $canCollect = ($order->courier_id === Auth::id()) && in_array($order->status, ['approved','awaiting_collection','ready_for_delivery','dijemput','diantar']);
+                                            $canPickUp = ($order->courier_id === Auth::id()) && in_array($order->status, ['pending','approved','awaiting_collection','ready_for_delivery','menunggu_jemput']);
                                         @endphp
-                                        @if($canCollect)
-                                            <a href="{{ route('courier.orders.pickup', $order->id) }}" class="px-3 py-1 bg-blue-600 text-white rounded text-sm">Catat Pembayaran</a>
-                                        @else
-                                            <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded text-sm">Catat Pembayaran</span>
+                                        
+                                        {{-- Button: Jemput (Pick Up) --}}
+                                        @if($canPickUp && !in_array($order->status, ['dijemput', 'diantar']))
+                                            <form method="POST" action="{{ route('courier.orders.picked_up', $order->id) }}" onsubmit="return confirm('Konfirmasi bahwa Anda telah menjemput pesanan ini?')">
+                                                @csrf
+                                                <button type="submit" class="px-3 py-1 bg-yellow-400 text-white rounded text-sm whitespace-nowrap hover:bg-yellow-500">Jemput</button>
+                                            </form>
                                         @endif
-                                        {{-- Button to mark as picked up --}}
-                                        <form method="POST" action="{{ route('courier.orders.picked_up', $order->id) }}" onsubmit="return confirm('Konfirmasi bahwa Anda telah menjemput pesanan ini?')">
-                                            @csrf
-                                            <button type="submit" class="px-3 py-1 bg-yellow-400 text-white rounded text-sm">Jemput</button>
-                                        </form>
-                                        {{-- NOTE: 'Tandai Diantar' shouldn't be available from 'Pending' list since the
-                                             courier must pick up the order first. The In-Process list below
-                                             will show the 'Tandai Diantar' button after the courier marks it as picked up. --}}
-                                        {{-- Button to finish and collect payment as an alternate path --}}
-                                        <form method="POST" action="{{ route('courier.orders.pickup.store', $order->id) }}" onsubmit="return confirm('Konfirmasi jemput dan catat pembayaran untuk pesanan ini?')">
-                                            @csrf
-                                            <input type="hidden" name="collection_method" value="Tunai">
-                                            <input type="hidden" name="collected_amount" value="{{ $order->total_price ?? 0 }}">
-                                            <button type="submit" class="px-3 py-1 bg-indigo-600 text-white rounded text-sm">Selesaikan & Tagih</button>
-                                        </form>
+                                        
+                                        {{-- Button: Catat Pembayaran --}}
+                                        @if($canCollect && in_array($order->status, ['dijemput','diantar']))
+                                            <a href="{{ route('courier.orders.pickup', $order->id) }}" class="px-3 py-1 bg-blue-600 text-white rounded text-sm whitespace-nowrap hover:bg-blue-700">Catat Pembayaran</a>
+                                        @endif
+
+                                        {{-- Button: Tandai Diantar --}}
+                                        @if(in_array($order->status, ['dijemput']))
+                                            <form method="POST" action="{{ route('courier.orders.delivered', $order->id) }}" onsubmit="return confirm('Konfirmasi bahwa pesanan sedang dalam perjalanan ke pelanggan?')">
+                                                @csrf
+                                                <button type="submit" class="px-3 py-1 bg-red-500 text-white rounded text-sm whitespace-nowrap hover:bg-red-600">Tandai Diantar</button>
+                                            </form>
+                                        @endif
+                                        
+                                        {{-- Button: Tandai Selesai --}}
+                                        @if(in_array($order->status, ['diantar']))
+                                            <form method="POST" action="{{ route('courier.orders.selesai', $order->id) }}" onsubmit="return confirm('Konfirmasi bahwa pesanan telah tiba di pelanggan dan SELESAI?')">
+                                                @csrf
+                                                <button type="submit" class="px-3 py-1 bg-green-500 text-white rounded text-sm whitespace-nowrap hover:bg-green-600">Tandai Selesai</button>
+                                            </form>
+                                        @endif
                                     </div>
                                 </td>
                             </tr>
@@ -100,50 +118,67 @@
             <div class="text-gray-600">Tidak ada pesanan yang sedang dalam proses.</div>
         @else
             <div class="overflow-x-auto">
-                <table class="w-full table-auto">
+                <table class="w-full table-auto border-collapse">
                     <thead class="bg-gray-50 text-left">
                         <tr>
-                            <th class="px-3 py-2">No</th>
-                            <th class="px-3 py-2">No Order</th>
-                            <th class="px-3 py-2">Customer</th>
-                            <th class="px-3 py-2">Layanan</th>
-                            <th class="px-3 py-2">Alamat</th>
-                            <th class="px-3 py-2">Status</th>
-                            <th class="px-3 py-2">Aksi</th>
+                            <th class="border px-3 py-2">No</th>
+                            <th class="border px-3 py-2">No Order</th>
+                            <th class="border px-3 py-2">Customer</th>
+                            <th class="border px-3 py-2">No. HP</th>
+                            <th class="border px-3 py-2">Layanan</th>
+                            <th class="border px-3 py-2">Alamat</th>
+                            <th class="border px-3 py-2">Status</th>
+                            <th class="border px-3 py-2 min-w-max">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($inProcessOrdersList as $index => $order)
-                            <tr class="odd:bg-white even:bg-gray-50">
-                                <td class="px-3 py-2">{{ $index + 1 }}</td>
-                                <td class="px-3 py-2">{{ $order->order_number }}</td>
-                                <td class="px-3 py-2">{{ $order->customer->name ?? '-' }}</td>
-                                <td class="px-3 py-2">{{ $order->service->name ?? '-' }}</td>
-                                <td class="px-3 py-2">{{ $order->customer->address ?? $order->address ?? '-' }}</td>
-                                <td class="px-3 py-2">{{ ucfirst($order->status) }}</td>
-                                <td class="px-3 py-2"> 
-                                    <div class="flex gap-2">
+                            <tr class="odd:bg-white even:bg-gray-50 border-b">
+                                <td class="border px-3 py-2">{{ $index + 1 }}</td>
+                                <td class="border px-3 py-2">{{ $order->order_number }}</td>
+                                <td class="border px-3 py-2">{{ $order->customer->name ?? '-' }}</td>
+                                <td class="border px-3 py-2">@if($order->customer->phone ?? $order->customer_phone) <a href="tel:{{ $order->customer->phone ?? $order->customer_phone }}" class="text-blue-600">{{ $order->customer->phone ?? $order->customer_phone }}</a> @else - @endif</td>
+                                <td class="border px-3 py-2">{{ $order->service->name ?? '-' }}</td>
+                                <td class="border px-3 py-2">{{ $order->customer->address ?? $order->address ?? '-' }}</td>
+                                <td class="border px-3 py-2">
+                                    @if($order->status === 'dijemput')
+                                        <span class="px-2 py-1 rounded text-xs font-semibold text-white bg-yellow-600">Dijemput</span>
+                                    @elseif($order->status === 'diantar')
+                                        <span class="px-2 py-1 rounded text-xs font-semibold text-white bg-red-600">Diantar</span>
+                                    @elseif(in_array($order->status, ['di_laundry', 'in_laundry']))
+                                        <span class="px-2 py-1 rounded text-xs font-semibold text-white bg-purple-600">{{ ucfirst(str_replace('_', ' ', $order->status)) }}</span>
+                                    @else
+                                        <span class="px-2 py-1 rounded text-xs font-semibold text-white bg-gray-600">{{ ucfirst(str_replace('_', ' ', $order->status)) }}</span>
+                                    @endif
+                                </td>
+                                <td class="border px-3 py-2">
+                                    <div class="flex gap-2 flex-wrap">
                                         @php
-                                            $canCollect = ($order->courier_id === Auth::id()) && in_array($order->status, ['approved','awaiting_collection','ready_for_delivery','dijemput']);
+                                            $canCollect = ($order->courier_id === Auth::id()) && in_array($order->status, ['approved','awaiting_collection','ready_for_delivery','dijemput','diantar']);
                                         @endphp
-                                        @if($canCollect)
-                                            <a href="{{ route('courier.orders.pickup', $order->id) }}" class="px-3 py-1 bg-blue-600 text-white rounded text-sm">Catat Pembayaran</a>
-                                        @else
-                                            <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded text-sm">Catat Pembayaran</span>
+                                        @if($canCollect && in_array($order->status, ['dijemput','diantar']))
+                                            <a href="{{ route('courier.orders.pickup', $order->id) }}" class="px-3 py-1 bg-blue-600 text-white rounded text-sm whitespace-nowrap hover:bg-blue-700">Catat Pembayaran</a>
                                         @endif
 
-                                        {{-- Add 'Tandai Diantar' here only when the order has been marked as 'dijemput' --}}
-                                        @if(in_array($order->status, ['dijemput','diantar']))
-                                            <form method="POST" action="{{ route('courier.orders.delivered', $order->id) }}" onsubmit="return confirm('Konfirmasi bahwa pesanan telah tiba di pelanggan dan SELESAI?')">
+                                        {{-- Add 'Tandai Diantar' button when the order has been marked as 'dijemput' --}}
+                                        @if(in_array($order->status, ['dijemput']))
+                                            <form method="POST" action="{{ route('courier.orders.delivered', $order->id) }}" onsubmit="return confirm('Konfirmasi bahwa pesanan sedang dalam perjalanan ke pelanggan?')">
                                                 @csrf
-                                                <button type="submit" class="px-3 py-1 bg-green-500 text-white rounded text-sm">Tandai Selesai</button>
+                                                <button type="submit" class="px-3 py-1 bg-red-500 text-white rounded text-sm whitespace-nowrap hover:bg-red-600">Tandai Diantar</button>
+                                            </form>
+                                        @endif
+                                        {{-- Add 'Tandai Selesai' button when order is being delivered --}}
+                                        @if(in_array($order->status, ['diantar']))
+                                            <form method="POST" action="{{ route('courier.orders.selesai', $order->id) }}" onsubmit="return confirm('Konfirmasi bahwa pesanan telah tiba di pelanggan dan SELESAI?')">
+                                                @csrf
+                                                <button type="submit" class="px-3 py-1 bg-green-500 text-white rounded text-sm whitespace-nowrap hover:bg-green-600">Tandai Selesai</button>
                                             </form>
                                         @endif
                                         {{-- Show 'Ambil Tugas' for ready_for_delivery orders if not assigned to this courier --}}
                                         @if($order->status === 'ready_for_delivery' && $order->courier_id === null)
                                             <form method="POST" action="{{ route('courier.orders.claim', $order->id) }}" onsubmit="return confirm('Ambil tugas dan kirim pesanan ini?')">
                                                 @csrf
-                                                <button type="submit" class="px-3 py-1 bg-indigo-600 text-white rounded text-sm">Ambil Tugas & Antar</button>
+                                                <button type="submit" class="px-3 py-1 bg-indigo-600 text-white rounded text-sm whitespace-nowrap hover:bg-indigo-700">Ambil Tugas & Antar</button>
                                             </form>
                                         @endif
 
@@ -170,6 +205,7 @@
                             <th class="px-3 py-2">No</th>
                             <th class="px-3 py-2">No Order</th>
                             <th class="px-3 py-2">Customer</th>
+                            <th class="px-3 py-2">No. HP</th>
                             <th class="px-3 py-2">Layanan</th>
                             <th class="px-3 py-2">Alamat</th>
                             <th class="px-3 py-2">Aksi</th>
@@ -181,6 +217,7 @@
                                 <td class="px-3 py-2">{{ $index + 1 }}</td>
                                 <td class="px-3 py-2">{{ $order->order_number }}</td>
                                 <td class="px-3 py-2">{{ $order->customer->name ?? '-' }}</td>
+                                <td class="px-3 py-2">@if($order->customer->phone ?? $order->customer_phone) <a href="tel:{{ $order->customer->phone ?? $order->customer_phone }}" class="text-blue-600">{{ $order->customer->phone ?? $order->customer_phone }}</a> @else - @endif</td>
                                 <td class="px-3 py-2">{{ $order->service->name ?? '-' }}</td>
                                 <td class="px-3 py-2">{{ $order->customer->address ?? $order->address ?? '-' }}</td>
                                 <td class="px-3 py-2">
@@ -236,32 +273,3 @@
 
 </div>
 @endsection
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    (function(){
-        const ctx = document.getElementById('courierEarningsChart');
-        if (!ctx) return;
-        const labels = JSON.parse('@json($months ?? [])'.replace(/&quot;/g, '"'));
-        const data = JSON.parse('@json($courierMonthlyEarnings ?? [])'.replace(/&quot;/g, '"'));
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: labels,
-                datasets: [{
-                    label: 'Penghasilan (Rp)',
-                    backgroundColor: '#10b981',
-                    borderColor: '#10b981',
-                    data: data,
-                    fill: false,
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: { beginAtZero: true }
-                }
-            }
-        });
-    })();
-</script>

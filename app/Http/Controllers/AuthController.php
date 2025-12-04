@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Cookie;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rule;
 
 class AuthController extends Controller
 {
@@ -20,6 +23,50 @@ class AuthController extends Controller
             return $this->redirectBasedOnRole($user->role);
         }
         return view('auth.login'); // Asumsi Anda memiliki view di resources/views/auth/login.blade.php
+    }
+
+    /**
+     * Menampilkan halaman pendaftaran untuk pelanggan.
+     */
+    public function showRegister()
+    {
+        if (Auth::check()) {
+            return $this->redirectBasedOnRole(Auth::user()->role);
+        }
+        return view('auth.register');
+    }
+
+    /**
+     * Menangani proses pendaftaran pelanggan.
+     */
+    public function register(Request $request)
+    {
+        $data = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'email', 'max:255', Rule::unique('users', 'email')],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'phone' => ['required', 'string', 'max:30'],
+            'address' => ['nullable', 'string', 'max:500'],
+        ]);
+
+        // Create the user with role customer
+        $user = User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+            'phone' => $data['phone'] ?? null,
+            'address' => $data['address'] ?? null,
+            'role' => 'customer',
+        ]);
+
+        // Log info for debugging
+        Log::info('REGISTER new customer: ' . $user->email . ' (id: ' . $user->id . ')');
+
+        // Auto-login the new user
+        Auth::login($user);
+        $request->session()->regenerate();
+
+        return redirect()->route('customer.dashboard')->with('success', 'Akun berhasil dibuat dan Anda telah masuk. Selamat datang!');
     }
 
     /**

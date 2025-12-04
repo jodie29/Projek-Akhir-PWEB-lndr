@@ -62,6 +62,10 @@ class CustomerController extends Controller
         $order = new Order();
         $order->order_number = $orderNumber;
         $order->customer_id = Auth::id();
+        // store a copy of customer's contact on order for courier convenience
+        $order->customer_phone = Auth::user()->phone ?? null;
+        $order->pickup_address = $data['address'] ?? Auth::user()->address ?? null;
+        $order->address = $data['address'] ?? Auth::user()->address ?? null;
         $order->service_id = $service->id;
         // actual_weight will be set by admin/kurir during approval/pickup
         $order->actual_weight = null;
@@ -117,16 +121,18 @@ class CustomerController extends Controller
         /** @var \App\Models\User $user */
         $user = Auth::user();
 
-        $orders = $user->orders()->with('service', 'courier')
+        // Explicitly filter by customer_id to prevent any data leakage
+        $orders = Order::where('customer_id', $user->id)
+            ->with('service', 'courier')
             ->orderBy('created_at', 'desc')
             ->paginate(20);
 
         // Counters for filters
-        $totalCount = $user->orders()->count();
+        $totalCount = Order::where('customer_id', $user->id)->count();
         // Include courier-specific statuses so customers can see progress after status changes
-        $activeCount = $user->orders()->whereIn('status', ['pending', 'menunggu_jemput', 'in_progress', 'processing', 'di_laundry', 'dijemput', 'diantar', 'confirmed', 'awaiting_payment'])->count();
-        $completedCount = $user->orders()->whereIn('status', ['selesai', 'completed', 'paid', 'delivered'])->count();
-        $cancelledCount = $user->orders()->whereIn('status', ['rejected', 'cancelled'])->count();
+        $activeCount = Order::where('customer_id', $user->id)->whereIn('status', ['pending', 'menunggu_jemput', 'in_progress', 'processing', 'di_laundry', 'dijemput', 'diantar', 'confirmed', 'awaiting_payment'])->count();
+        $completedCount = Order::where('customer_id', $user->id)->whereIn('status', ['selesai', 'completed', 'paid', 'delivered'])->count();
+        $cancelledCount = Order::where('customer_id', $user->id)->whereIn('status', ['rejected', 'cancelled'])->count();
 
         return view('customer.order.history', compact('orders', 'totalCount', 'activeCount', 'completedCount', 'cancelledCount'));
     }
@@ -145,10 +151,9 @@ class CustomerController extends Controller
         /** @var User $user */
         $user = Auth::user();
 
-        // Lebih aman memanggil Order::where('customer_id', Auth::id()) daripada relying on
-        // $user->orders() for static analysis and to avoid surprises if relation is not present.
-        $order = Order::with('service', 'courier')
-            ->where('customer_id', $user->id)
+        // Explicitly filter by customer_id to ensure customer can only see their own orders
+        $order = Order::where('customer_id', $user->id)
+            ->with('service', 'courier')
             ->findOrFail($orderId);
 
         // Membangun event timeline sederhana berdasarkan atribut order

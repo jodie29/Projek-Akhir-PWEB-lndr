@@ -34,6 +34,10 @@ class CashierController extends Controller
 
         $orderData = [
             'order_number' => 'PW-' . now()->format('YmdHis'),
+            'customer_name' => $data['customer_name'] ?? null,
+            'customer_phone' => $data['customer_phone'] ?? null,
+            'pickup_address' => $data['customer_address'] ?? null,
+            'address' => $data['customer_address'] ?? null,
             'service_id' => $service->id,
             'actual_weight' => $weight,
             'total_price' => $final,

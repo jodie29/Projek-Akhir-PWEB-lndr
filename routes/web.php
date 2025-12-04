@@ -33,6 +33,9 @@ use App\Http\Controllers\OrderConfirmationController;
 // Halaman login
 Route::get('/', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('login.post');
+// Halaman pendaftaran untuk pelanggan (register)
+Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
+Route::post('/register', [AuthController::class, 'register'])->name('register.post');
 // Route Logout harus menggunakan POST
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
@@ -112,6 +115,7 @@ Route::middleware(['auth', 'role:courier'])->prefix('courier')->name('courier.')
     // Courier marks: pick up and mark as delivered
     Route::post('orders/{order}/picked-up', [CourierOrderController::class, 'pickedUp'])->name('orders.picked_up');
     Route::post('orders/{order}/delivered', [CourierOrderController::class, 'delivered'])->name('orders.delivered');
+    Route::post('orders/{order}/selesai', [CourierOrderController::class, 'markAsSelesai'])->name('orders.selesai');
 });
 
 /*

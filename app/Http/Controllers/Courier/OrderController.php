@@ -28,8 +28,8 @@ class OrderController extends Controller
         }
 
         // Pastikan order pada status yang memungkinkan pembayaran
-        // (misal: "approved", "awaiting_collection", "ready_for_delivery" atau "dijemput").
-        if (!in_array($order->status, ['approved', 'awaiting_collection', 'ready_for_delivery', 'dijemput'])) {
+        // (misal: "approved", "awaiting_collection", "ready_for_delivery", "dijemput" atau "diantar").
+        if (!in_array($order->status, ['approved', 'awaiting_collection', 'ready_for_delivery', 'dijemput', 'diantar'])) {
             return redirect()->route('courier.dashboard')->with('error', 'Pembayaran untuk pesanan ini tidak dapat dicatat pada status saat ini (' . $order->status . ').');
         }
 
@@ -188,17 +188,46 @@ class OrderController extends Controller
         }
 
         // Only allow deliver if it has been picked up
-        if (! in_array($order->status, ['dijemput', 'diantar'])) {
+        if (! in_array($order->status, ['dijemput'])) {
             return back()->with('error', 'Order tidak dapat ditandai diantar pada status saat ini: ' . $order->status);
         }
 
-        // Mark as delivered by courier and finalize as 'selesai'
+        // Mark as being delivered
+        $order->status = 'diantar';
+        $order->save();
+
+        // Add logging for debugging
+        Log::info('Order marked as diantar: ' . $order->id . ' by courier ' . Auth::id());
+
+        return back()->with('success', 'Pesanan ' . $order->order_number . ' berhasil ditandai sebagai DIANTAR.');
+    }
+
+    /**
+     * Mark the order as completed (status: 'selesai') after delivery.
+     */
+    public function markAsSelesai(Order $order)
+    {
+        // Safety: Make sure migration for courier_id exists
+        if (!\Illuminate\Support\Facades\Schema::hasColumn('orders', 'courier_id')) {
+            return back()->with('error', 'Kolom `courier_id` belum tersedia. Silakan jalankan `php artisan migrate`.');
+        }
+        // Authorization
+        if ($order->courier_id !== Auth::id()) {
+            return back()->with('error', 'Pesanan ini tidak ditugaskan kepada Anda.');
+        }
+
+        // Only allow mark as selesai if it's being delivered
+        if (! in_array($order->status, ['diantar'])) {
+            return back()->with('error', 'Order tidak dapat ditandai selesai pada status saat ini: ' . $order->status);
+        }
+
+        // Mark as completed
         $order->status = 'selesai';
         $order->save();
 
         // Add logging for debugging
         Log::info('Order marked as selesai: ' . $order->id . ' by courier ' . Auth::id());
 
-        return back()->with('success', 'Pesanan ' . $order->order_number . ' berhasil ditandai sebagai SELESAI. Silakan admin verifikasi & input berat jika dibutuhkan.');
+        return back()->with('success', 'Pesanan ' . $order->order_number . ' berhasil ditandai sebagai SELESAI.');
     }
 }
