@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Order;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Log; // Pastikan Log diimpor
+use Illuminate\Support\Facades\Log; 
 
 class OrderController extends Controller
 {
@@ -18,22 +18,18 @@ class OrderController extends Controller
      */
     public function collectForm(Order $order)
     {
-        // Safety: Make sure migration for courier_id is applied
         if (!\Illuminate\Support\Facades\Schema::hasColumn('orders', 'courier_id')) {
             return redirect()->route('courier.dashboard')->with('error', 'Kolom `courier_id` belum tersedia. Silakan jalankan `php artisan migrate`.');
         }
-        // Pastikan order ditugaskan ke kurir ini
         if ($order->courier_id !== Auth::id()) {
             return redirect()->route('courier.dashboard')->with('error', 'Pesanan ini tidak ditugaskan kepada Anda.');
         }
 
-        // Pastikan order pada status yang memungkinkan pembayaran
-        // (misal: "approved", "awaiting_collection", "ready_for_delivery", "dijemput" atau "diantar").
         if (!in_array($order->status, ['approved', 'awaiting_collection', 'ready_for_delivery', 'dijemput', 'diantar'])) {
             return redirect()->route('courier.dashboard')->with('error', 'Pembayaran untuk pesanan ini tidak dapat dicatat pada status saat ini (' . $order->status . ').');
         }
 
-        $order->load('service', 'customer'); // Load relasi yang diperlukan
+        $order->load('service', 'customer'); 
 
         return view('courier.orders.collect', compact('order'));
     }
@@ -44,13 +40,10 @@ class OrderController extends Controller
      */
     public function collect(Request $request, Order $order)
     {
-        // Safety: Make sure migration for courier_id is applied
         if (!\Illuminate\Support\Facades\Schema::hasColumn('orders', 'courier_id')) {
             return redirect()->route('courier.dashboard')->with('error', 'Kolom `courier_id` belum tersedia. Silakan jalankan `php artisan migrate`.');
         }
-        // Validasi Awal 1: Pastikan order ditugaskan ke kurir ini
         if ($order->courier_id !== Auth::id()) {
-            // Log pesan jika ada upaya akses yang tidak sah
             Log::warning('Unauthorized access attempt to collect payment for Order: ' . $order->id . ' by User: ' . Auth::id());
             return back()->with('error', 'Akses ditolak: Pesanan ini tidak ditugaskan kepada Anda.');
         }
@@ -81,13 +74,11 @@ class OrderController extends Controller
         try {
             DB::beginTransaction();
 
-            // 1. Catat detail koleksi pembayaran
             $order->collection_method = $validatedData['collection_method'];
             $order->collected_amount = $validatedData['collected_amount'];
             $order->collected_by = Auth::id();
             $order->collected_at = now();
 
-            // Create transaction record in new transactions table
             \App\Models\Transaction::create([
                 'order_id' => $order->id,
                 'type' => 'collection',
@@ -207,25 +198,18 @@ class OrderController extends Controller
      */
     public function markAsSelesai(Order $order)
     {
-        // Safety: Make sure migration for courier_id exists
         if (!\Illuminate\Support\Facades\Schema::hasColumn('orders', 'courier_id')) {
             return back()->with('error', 'Kolom `courier_id` belum tersedia. Silakan jalankan `php artisan migrate`.');
         }
-        // Authorization
         if ($order->courier_id !== Auth::id()) {
             return back()->with('error', 'Pesanan ini tidak ditugaskan kepada Anda.');
         }
 
-        // Only allow mark as selesai if it's being delivered
         if (! in_array($order->status, ['diantar'])) {
             return back()->with('error', 'Order tidak dapat ditandai selesai pada status saat ini: ' . $order->status);
         }
-
-        // Mark as completed
         $order->status = 'selesai';
         $order->save();
-
-        // Add logging for debugging
         Log::info('Order marked as selesai: ' . $order->id . ' by courier ' . Auth::id());
 
         return back()->with('success', 'Pesanan ' . $order->order_number . ' berhasil ditandai sebagai SELESAI.');
